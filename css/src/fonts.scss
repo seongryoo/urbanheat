@@ -1,0 +1,43 @@
+@mixin open-sans($trailer, $svg-hash, $font-weight, $font-style) {
+  font-family: "OpenSans";
+  $font-path: "../fonts/opensans";
+  src: url("#{$font-path}-#{$trailer}.eot");
+  src: url("#{$font-path}-#{$trailer}.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}-#{$trailer}.woff2") format("woff2"),
+       url("#{$font-path}-#{$trailer}.woff") format("woff"),
+       url("#{$font-path}-#{$trailer}.ttf") format("truetype"),
+       url("#{$font-path}-#{$trailer}.svg#{$svg-hash}") format("svg");
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@font-face {
+  @include open-sans("bold", "#OpenSansbold", bold, normal);
+}
+@font-face {
+  @include open-sans("bolditalic", "#OpenSansbold_italic", bold, italic);
+}
+@font-face {
+  @include open-sans("extrabold", "#OpenSansextrabold", bold, normal);
+}
+@font-face {
+  @include open-sans("extrabolditalic", "#OpenSansextrabold_italic", bold, italic);
+}
+@font-face {
+  @include open-sans("italic", "#OpenSansitalic", normal, italic);
+}
+@font-face {
+  @include open-sans("light", "#OpenSanslight", normal, normal);
+}
+@font-face {
+  @include open-sans("lightitalic", "#OpenSanslight_italic", normal, italic);
+}
+@font-face {
+  @include open-sans("regular", "#OpenSansregular", normal, normal);
+}
+@font-face {
+  @include open-sans("semibold", "#OpenSanssemibold", bold, normal);
+}
+@font-face {
+  @include open-sans("semibolditalic", "#OpenSanssemibold_italic", bold, italic);
+}
