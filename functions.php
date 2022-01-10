@@ -15,7 +15,7 @@ class UrbanHeatATL_Theme {
     // Add type="module" to scripts
     add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
       $scripts = constant( __CLASS__ . "::SCRIPTS" );
-      foreach( $scripts as $script ) {
+      foreach ( $scripts as $script ) {
         if ( $handle == 'urbanheat-' . $script ) {
           return '<script type="module" src="' . esc_url( $src ) . '"></script>';
         }
@@ -45,7 +45,14 @@ class UrbanHeatATL_Theme {
           $style_url . $style . '.css'
         );
       }
-
+      $script_url = get_template_directory_uri() . '/js/';
+      $scripts = constant( __CLASS__ . "::SCRIPTS" );
+      foreach ( $scripts as $script ) {
+        wp_enqueue_script(
+          'urbanheat-' . $script,
+          $script_url . $script . '.js'
+        );
+      }
     } );
     // Stylesheets and JS files for wordpress editor pages
     add_action( 'enqueue_block_editor_assets', function() {
