@@ -10,8 +10,17 @@ body {
   line-height: scale.$line-height-db;
   text-rendering: optimizeLegibility;
   font-kerning: normal; 
+  @media (max-width: scale.$break-s) {
+    font-size: scale.$font-size-mb;
+    line-height: scale.$line-height-mb;
+  }
 }
 h1 {
   font-size: scale.$font-size-dh;
   line-height: scale.$line-height-dh;
+  font-weight: 800;
+  @media (max-width: scale.$break-s) {
+    font-size: scale.$font-size-mh;
+    line-height: scale.$line-height-mh;
+  }
 }

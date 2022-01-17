@@ -6,16 +6,20 @@
 // mh: mobile-heading
 
 $font-size-db: 1.359rem;
-$font-size-dh: 2.818rem;
-$font-size-mb: 0.94375rem;
-$font-size-mh: 1.6308125rem;
+$font-size-dh: 3.381625rem;
+$font-size-mb: 1.1325rem;
+$font-size-mh: 2.818rem;
 
 $line-height-db: 1.728;
-$line-height-dh: 1.44;
+$line-height-dh: 1.2;
 $line-height-mb: 1.728;
-$line-height-mh: 1.44;
+$line-height-mh: 1.2;
 
 $big-space: 4.0579375rem;
 $med-space: 2.818rem;
 $lil-space: 1.6308125rem;
 $tny-space: 0.94375rem;
+
+$break-s: 360rem/16;
+$break-m: 900rem/16;
+$break-l: 1440rem/16;

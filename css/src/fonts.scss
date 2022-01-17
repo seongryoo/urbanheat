@@ -18,10 +18,10 @@
   @include open-sans("bolditalic", "#OpenSansbold_italic", bold, italic);
 }
 @font-face {
-  @include open-sans("extrabold", "#OpenSansextrabold", bold, normal);
+  @include open-sans("extrabold", "#OpenSansextrabold", 800, normal);
 }
 @font-face {
-  @include open-sans("extrabolditalic", "#OpenSansextrabold_italic", bold, italic);
+  @include open-sans("extrabolditalic", "#OpenSansextrabold_italic", 800, italic);
 }
 @font-face {
   @include open-sans("italic", "#OpenSansitalic", normal, italic);
@@ -36,8 +36,8 @@
   @include open-sans("regular", "#OpenSansregular", normal, normal);
 }
 @font-face {
-  @include open-sans("semibold", "#OpenSanssemibold", bold, normal);
+  @include open-sans("semibold", "#OpenSanssemibold", 500, normal);
 }
 @font-face {
-  @include open-sans("semibolditalic", "#OpenSanssemibold_italic", bold, italic);
+  @include open-sans("semibolditalic", "#OpenSanssemibold_italic", 500, italic);
 }
