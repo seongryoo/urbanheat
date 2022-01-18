@@ -1,6 +1,6 @@
 <?php
 
-// include( plugin_dir_path( __FILE__ ) . '../editor/renders/')
+include( plugin_dir_path( __FILE__ ) . '../editor/renders/hero.php' );
 
 class UrbanHeatATL_Blocks {
   const STYLES = array(

@@ -9,7 +9,7 @@
       category: 'design',
       icon: 'superhero-alt',
       edit: (props) => {
-        return <div>Ya</div>;
+        return `<div>Ya</div>`;
       },
       save: (props) => {
         return null;
