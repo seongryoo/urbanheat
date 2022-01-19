@@ -1,5 +1,5 @@
 (function(wp) {
-  const { _ } = wp.i18n;
+  const { __ } = wp.i18n;
   const { registerBlockType } = wp.blocks;
   const { TextareaControl } = wp.components;
   const { createElement } = wp.element;
@@ -12,8 +12,8 @@
         return el(
             TextareaControl,
             {
-              label: _( 'Hero block text' ),
-              placeholder: _( 'Add text to be displayed on one side of the hero block' ),
+              label: __( 'Hero block text' ),
+              placeholder: __( 'Add text to be displayed on one side of the hero block' ),
               value: props.attributes.sideText,
               onChange: (value) => {
                 props.setAttributes({sideText: value});
@@ -24,7 +24,7 @@
       save: (props) => {
         return null;
       },
-      title: _( 'Hero Block' ),
+      title: 'Hero Block',
       category: 'design',
       icon: 'superhero-alt',
     }
