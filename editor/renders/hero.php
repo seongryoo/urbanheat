@@ -6,6 +6,15 @@ class HeroBlock {
     'sideText' => array(
       'type' => 'string'
     ),
+    'sideImageId' => array(
+      'type' => 'string'
+    ),
+    'sideImageUrl' => array(
+      'type' => 'string'
+    ),
+    'sideImageAlt' => array(
+      'type' => 'string'
+    ),
     'isImageLeft' => array(
       'type' => 'boolean',
       'default' => TRUE,
