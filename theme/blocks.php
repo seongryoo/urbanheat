@@ -4,7 +4,14 @@ include( plugin_dir_path( __FILE__ ) . '../editor/renders/hero.php' );
 
 class UrbanHeatATL_Blocks {
   const STYLES = array(
-
+    'hero',
+  );
+  const SITE_STYLES = array(
+    'fonts',
+    'base',
+    'utils',
+    'layout',
+    'text',
   );
   const SCRIPTS = array(
     '_icons',
@@ -34,6 +41,14 @@ class UrbanHeatATL_Blocks {
           'urbanheat-' . $script,
           $script_url . $script,
           $dependencies
+        );
+      }
+      $site_style_url = get_template_directory_uri() . '/css/build/';
+      $site_styles = constant( __CLASS__ . "::SITE_STYLES" );
+      foreach ( $site_styles as $site_style ) {
+        wp_enqueue_style(
+          'urbanheat-' . $site_style,
+          $site_style_url . $site_style . '.css'
         );
       }
     } );

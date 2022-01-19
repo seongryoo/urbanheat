@@ -1,0 +1,20 @@
+.admin-button {
+
+}
+
+.admin-button__icon {
+  margin-right: 0.5rem;
+}
+
+.admin-hero__swap-sides {
+
+}
+
+.admin-hero__container {
+  display: flex;
+}
+
+.admin-hero__container__side-content {
+  flex: 50%;
+  border: 1px solid gray;
+}

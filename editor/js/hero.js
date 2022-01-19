@@ -27,7 +27,7 @@ registerBlockType( 'urbanheat/hero-block', {
                         Button,
                         {onClick: open},
                         [
-                          el(Icon, {icon: Upload}),
+                          el(Icon, {icon: Upload, className: 'admin-button__icon'}),
                           __( 'Upload image for hero block' )
                         ]
                     )
@@ -53,10 +53,45 @@ registerBlockType( 'urbanheat/hero-block', {
             },
           }
       );
+      const imageSide = el(
+          'div',
+          {
+            className: 'admin-hero__container__side-content admin-hero__container__side-content--image-side',
+          },
+          [sideImageUploadButton, sideImagePreview]
+      );
+      const textSide = el(
+          'div',
+          {
+            className: 'admin-hero__container__side-content admin-hero__container__side-content--text-side',
+          },
+          sideTextInput
+      );
+      const flipSides = el(
+          Button,
+          {
+            onClick: () => {
+              props.setAttributes({isImageLeft: !props.attributes.isImageLeft});
+            }, 
+            className: 'admin-button admin-hero__swap-sides'
+          },
+          [
+            el(Icon, {icon: Swap, className: 'admin-button__icon'}), 
+            __( props.attributes.isImageLeft ? 'Image on the left. Click to swap sides.' : 'Image on the right. Click to swap sides.' )]
+      );
+      const flexContainer = el(
+          'div',
+          {
+            className: 'admin-hero__container'
+          },
+          props.attributes.isImageLeft ? [imageSide, textSide] : [textSide, imageSide]
+      );
       return el(
           'div',
-          {},
-          [sideImageUploadButton, sideImagePreview, sideTextInput]
+          {
+            className: 'admin-hero'
+          },
+          [flexContainer, flipSides]
       );
     },
     save: (props) => {

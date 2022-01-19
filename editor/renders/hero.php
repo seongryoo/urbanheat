@@ -24,10 +24,15 @@ class HeroBlock {
     // Attribute retrieval
     $side_text = $attributes[ 'sideText' ];
     $is_image_left = $attributes[ 'isImageLeft' ];
-    
+    $side_image_id = $attributes[ 'sideImageId' ];
+    $side_image_url = $attributes[ 'sideImageUrl' ];
+    $side_image_alt = $attributes[ 'sideImageAlt' ];
+
     // Markup generation for text and image sides
-    $text_content = $side_text;
-    $image_content = 'img';
+    $text_content = "<div class=\"hero__content__text\">
+                       {$side_text}
+                     </div>";
+    $image_content = "<img class=\"hero__content__image\" src=\"{$side_image_url}\" alt=\"{$side_image_alt}\">";
 
     // Image/text direction setting
     if ( $is_image_left  ) {
@@ -39,10 +44,10 @@ class HeroBlock {
     }
 
     return "<div class=\"hero\">
-              <div class=\"hero__left-content\">
+              <div class=\"hero__content hero__content--left\">
                 {$left_content}
               </div>
-              <div class=\"hero__right-content\">
+              <div class=\"hero__content hero__content--right\">
                 {$right_content}
               </div>
             </div>";
