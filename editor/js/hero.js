@@ -1,19 +1,32 @@
 (function(wp) {
-  const el = wp.element.createElement;
-  const InnerBlocks = wp.blockEditor.InnerBlocks;
-  const registerBlockType = wp.blocks.registerBlockType;
-  registerBlockType(
-    'urbanheat/hero-block',
-    {
-      title: 'Hero Block',
-      category: 'design',
-      icon: 'superhero-alt',
+  const { _ } = wp.i18n;
+  const { registerBlockType } = wp.blocks;
+  const { TextareaControl } = wp.components;
+  const { createElement } = wp.element;
+  const { MediaUpload, MediaUploadCheck } = wp.blockEditor;
+
+  const el = createElement;
+  
+  registerBlockType( 'urbanheat/hero-block', {
       edit: (props) => {
-        return `<div>Ya</div>`;
+        return el(
+            TextareaControl,
+            {
+              label: _( 'Hero block text' ),
+              placeholder: _( 'Add text to be displayed on one side of the hero block' ),
+              value: props.attributes.sideText,
+              onChange: (value) => {
+                props.setAttributes({sideText: value});
+              },
+            }
+        );
       },
       save: (props) => {
         return null;
       },
+      title: _( 'Hero Block' ),
+      category: 'design',
+      icon: 'superhero-alt',
     }
   );
 })(window.wp);

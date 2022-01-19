@@ -6,7 +6,7 @@
       the_post(); ?>
       
         <h1 class="visually-hidden">
-          Urban Heat ATL home
+          <?php _e( 'Urban Heat ATL home', 'urbanheat' ); ?>
         </h1>
 
         <div class="contained">

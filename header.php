@@ -12,6 +12,6 @@
 <nav aria-labelledby="skiplink" class="contained">
   <span id="skiplink" class="aria-labelledby">Skip link</span>
   <a href="#main" class="skip-link">
-    Skip to main content
+    <?php _e( 'Skip to main content', 'urbanheat' ); ?>
   </a>
 </nav>
