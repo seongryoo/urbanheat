@@ -7,6 +7,7 @@ class UrbanHeatATL_Blocks {
 
   );
   const SCRIPTS = array(
+    '_icons',
     'hero',
   );
   const DEPENDENCIES = array(
@@ -37,7 +38,20 @@ class UrbanHeatATL_Blocks {
       }
     } );
   }
+  function filters__editor() {
+    // Add type="module" to scripts
+    add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
+      $scripts = constant( __CLASS__ . "::SCRIPTS" );
+      foreach ( $scripts as $script ) {
+        if ( $handle == 'urbanheat-' . $script ) {
+          return '<script type="module" src="' . esc_url( $src ) . '"></script>';
+        }
+      }    
+      return $tag;
+    }, 10, 3 );
+  }
   function __construct() {
     $this->actions__editor();
+    $this->filters__editor();
   }
 }
