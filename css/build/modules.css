@@ -1,0 +1,24 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__content {
+  flex: 50%;
+}
+
+.hero__content__text {
+  font-size: 2.818rem;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 4.0579375rem 0;
+}
+@media (max-width: 22.5rem) {
+  .hero__content__text {
+    font-size: 2.818rem;
+    line-height: 1.2;
+  }
+}
+
+/*# sourceMappingURL=modules.css.map */

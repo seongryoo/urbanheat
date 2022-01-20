@@ -1,0 +1,15 @@
+@use 'scale';
+@use 'text';
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero__content {
+  flex: 50%;
+}
+.hero__content__text {
+  @include text.main-header;
+  margin: scale.$big-space 0;
+}
