@@ -16,6 +16,7 @@
   font-size: 2.818rem;
   line-height: 1.2;
   font-weight: 800;
+  margin-bottom: 1.1325rem;
 }
 @media (max-width: 22.5rem) {
   .hero__content__header {
