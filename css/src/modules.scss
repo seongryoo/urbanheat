@@ -10,8 +10,10 @@
   flex: 50%;
 }
 .hero__content__text {
-  @include text-styles.main-header;
   margin: scale.$big-space 0;
+}
+.hero__content__header {
+  @include text-styles.main-header;
 }
 .hero__content__image {
   width: 100%;

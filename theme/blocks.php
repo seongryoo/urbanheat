@@ -8,7 +8,7 @@ class UrbanHeatATL_Blocks {
     'hero',
   );
   const SITE_STYLES = array(
-    
+    'fonts'
   );
   const SCRIPTS = array(
     '_icons',

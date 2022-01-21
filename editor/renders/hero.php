@@ -40,15 +40,23 @@ class HeroBlock {
   function render_block( $attributes, $content ) {
     // Attribute retrieval
     $heading_content = $attributes[ 'headingContent' ];
+    $caption_content = $attributes[ 'captionContent' ];
     $is_image_left = $attributes[ 'isImageLeft' ];
     $side_image_id = $attributes[ 'sideImageId' ];
     $side_image_url = $attributes[ 'sideImageUrl' ];
     $side_image_alt = $attributes[ 'sideImageAlt' ];
 
     // Markup generation for text and image sides
-    $text_content = "<div class=\"hero__content__text\">
-                       {$heading_content}
-                     </div>";
+    $text_content = "
+                    <div class=\"hero__content__text\">
+                      <div class=\"hero__content__header\">
+                        {$heading_content}
+                      </div>
+                      <div class=\"hero__content__caption\">
+                        {$caption_content}
+                      </div>
+                    </div>
+                    ";
     $image_content = "<img class=\"hero__content__image\" src=\"{$side_image_url}\" alt=\"{$side_image_alt}\">";
 
     // Image/text direction setting

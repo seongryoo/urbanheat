@@ -1,7 +1,7 @@
 import { Swap, Upload } from './_icons';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { TextareaControl, Button, Icon } = wp.components;
+const { TextareaControl, Button, Icon, TextControl } = wp.components;
 const { createElement } = wp.element;
 const { MediaUpload, MediaUploadCheck, RichText } = wp.blockEditor;
 
@@ -51,6 +51,7 @@ registerBlockType( 'urbanheat/hero-block', {
             onChange: (value) => {
               props.setAttributes({headingContent: value});
             },
+            className: 'admin-hero__input'
           }
       );
       const captionContentInput = el(
@@ -59,11 +60,32 @@ registerBlockType( 'urbanheat/hero-block', {
             value: props.attributes.captionContent,
             onChange: (value) => props.setAttributes({captionContent: value}),
             id: 'caption-content',
-            className: 'admin-hero__container__side-content__rich-input',
+            className: 'admin-hero__container__side-content__rich-input admin-hero__input',
           }
       )
       const captionContentInputLabel = el('label', {for: 'caption-content'}, 'Caption content to be displayed below heading');
-      const captionContent = [captionContentInputLabel, captionContentInput];
+      const captionContent = el('div', {className: 'admin-hero__input'}, [captionContentInputLabel, captionContentInput]);
+      const callToActionTextInput = el(
+        TextControl,
+        {
+          value: props.attributes.callToActionText,
+          onChange: (value) => props.setAttributes({callToActionText: value}),
+          label: 'Text to display on call-to-action button',
+          className: 'admin-hero__input',
+        }
+      );
+      const callToActionUrlInput = el(
+        TextControl,
+        {
+          value: props.attributes.callToActionUrl,
+          onChange: (value) => props.setAttributes({callToActionUrl: value}),
+          label: 'Call-to-action URL',
+          help: 'Type something like \'\/about\' or \'\/data\' in order to link to an internal page',
+          type: 'url',
+          className: 'admin-hero__input',
+        }
+      );
+      const callToAction = [callToActionTextInput, callToActionUrlInput];
       const imageSide = el(
           'div',
           {
@@ -71,12 +93,18 @@ registerBlockType( 'urbanheat/hero-block', {
           },
           [sideImageUploadButton, sideImagePreview]
       );
+      const optionCaption = el(Button, {onClick: () => props.setAttributes({isCaption: true}), className: 'is-secondary'}, 'Add caption');
+      const optionCallToAction = el(Button, {onClick: () => props.setAttributes({isCallToAction: true}), className: 'is-secondary'}, 'Add call-to-action');
       const textSide = el(
           'div',
           {
             className: 'admin-hero__container__side-content admin-hero__container__side-content--text-side',
           },
-          [headingContentInput, captionContent]
+          [
+            headingContentInput, 
+            !props.attributes.isCaption ? optionCaption : captionContent, 
+            !props.attributes.isCallToAction ? optionCallToAction : callToAction,
+          ]
       );
       const flipSides = el(
           Button,
