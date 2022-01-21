@@ -56,14 +56,14 @@ registerBlockType( 'urbanheat/hero-block', {
       const imageSide = el(
           'div',
           {
-            className: 'admin-hero__container__side-content admin-hero__container__side-content--image-side',
+            className: 'hero__content hero__content__image',
           },
           [sideImageUploadButton, sideImagePreview]
       );
       const textSide = el(
           'div',
           {
-            className: 'admin-hero__container__side-content admin-hero__container__side-content--text-side',
+            className: 'hero__content hero__content__text',
           },
           sideTextInput
       );
@@ -73,7 +73,7 @@ registerBlockType( 'urbanheat/hero-block', {
             onClick: () => {
               props.setAttributes({isImageLeft: !props.attributes.isImageLeft});
             }, 
-            className: 'admin-button admin-hero__swap-sides'
+            className: 'admin-button hero--admin__swap-sides'
           },
           [
             el(Icon, {icon: Swap, className: 'admin-button__icon'}), 
@@ -82,14 +82,14 @@ registerBlockType( 'urbanheat/hero-block', {
       const flexContainer = el(
           'div',
           {
-            className: 'admin-hero__container'
+            className: 'hero hero--admin'
           },
           props.attributes.isImageLeft ? [imageSide, textSide] : [textSide, imageSide]
       );
       return el(
           'div',
           {
-            className: 'admin-hero'
+            className: ''
           },
           [flexContainer, flipSides]
       );

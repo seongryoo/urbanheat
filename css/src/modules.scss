@@ -1,5 +1,5 @@
 @use 'scale';
-@use 'text';
+@use 'text-styles';
 
 .hero {
   display: flex;
@@ -10,6 +10,6 @@
   flex: 50%;
 }
 .hero__content__text {
-  @include text.main-header;
+  @include text-styles.main-header;
   margin: scale.$big-space 0;
 }

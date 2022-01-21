@@ -1,21 +1,13 @@
 @use 'colors';
 @use 'scale';
-@use 'text';
+@use 'text-styles';
 
 body, h1, h2, h3, h4, h6, p {
   margin: 0;
 }
 body {
-  font-family: 'OpenSans', Verdana, sans-serif;
-  font-size: scale.$font-size-db;
-  line-height: scale.$line-height-db;
-  text-rendering: optimizeLegibility;
-  font-kerning: normal; 
-  @media (max-width: scale.$break-s) {
-    font-size: scale.$font-size-mb;
-    line-height: scale.$line-height-mb;
-  }
+  @include text-styles.paragraph;
 }
 h1 {
-  @include text.main-header;
+  @include text-styles.main-header;
 }

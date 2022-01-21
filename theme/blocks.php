@@ -12,6 +12,7 @@ class UrbanHeatATL_Blocks {
     'utils',
     'layout',
     'text',
+    'modules',
   );
   const SCRIPTS = array(
     '_icons',
