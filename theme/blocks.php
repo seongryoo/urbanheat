@@ -4,15 +4,11 @@ include( plugin_dir_path( __FILE__ ) . '../editor/renders/hero.php' );
 
 class UrbanHeatATL_Blocks {
   const STYLES = array(
+    'admin',
     'hero',
   );
   const SITE_STYLES = array(
-    'fonts',
-    'base',
-    'utils',
-    'layout',
-    'text',
-    'modules',
+    
   );
   const SCRIPTS = array(
     '_icons',

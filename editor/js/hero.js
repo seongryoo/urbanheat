@@ -3,7 +3,7 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { TextareaControl, Button, Icon } = wp.components;
 const { createElement } = wp.element;
-const { MediaUpload, MediaUploadCheck } = wp.blockEditor;
+const { MediaUpload, MediaUploadCheck, RichText } = wp.blockEditor;
 
 const el = createElement;
 registerBlockType( 'urbanheat/hero-block', {
@@ -42,30 +42,41 @@ registerBlockType( 'urbanheat/hero-block', {
             alt: props.attributes.sideImageAlt,
           }
       );
-      const sideTextInput = el(
+      const headingContentInput = el(
           TextareaControl,
           {
-            label: __( 'Hero block text' ),
-            placeholder: __( 'Add text to be displayed on one side of the hero block' ),
-            value: props.attributes.sideText,
+            label: __( 'Hero block heading' ),
+            placeholder: __( 'Add heading text to be displayed on one side of the hero block' ),
+            value: props.attributes.headingContent,
             onChange: (value) => {
-              props.setAttributes({sideText: value});
+              props.setAttributes({headingContent: value});
             },
           }
       );
+      const captionContentInput = el(
+          RichText,
+          {
+            value: props.attributes.captionContent,
+            onChange: (value) => props.setAttributes({captionContent: value}),
+            id: 'caption-content',
+            className: 'admin-hero__container__side-content__rich-input',
+          }
+      )
+      const captionContentInputLabel = el('label', {for: 'caption-content'}, 'Caption content to be displayed below heading');
+      const captionContent = [captionContentInputLabel, captionContentInput];
       const imageSide = el(
           'div',
           {
-            className: 'hero__content hero__content__image',
+            className: 'admin-hero__container__side-content admin-hero__container__side-content--image-side',
           },
           [sideImageUploadButton, sideImagePreview]
       );
       const textSide = el(
           'div',
           {
-            className: 'hero__content hero__content__text',
+            className: 'admin-hero__container__side-content admin-hero__container__side-content--text-side',
           },
-          sideTextInput
+          [headingContentInput, captionContent]
       );
       const flipSides = el(
           Button,
@@ -73,7 +84,7 @@ registerBlockType( 'urbanheat/hero-block', {
             onClick: () => {
               props.setAttributes({isImageLeft: !props.attributes.isImageLeft});
             }, 
-            className: 'admin-button hero--admin__swap-sides'
+            className: 'admin-button admin-hero__swap-sides'
           },
           [
             el(Icon, {icon: Swap, className: 'admin-button__icon'}), 
@@ -82,14 +93,14 @@ registerBlockType( 'urbanheat/hero-block', {
       const flexContainer = el(
           'div',
           {
-            className: 'hero hero--admin'
+            className: 'admin-hero__container'
           },
           props.attributes.isImageLeft ? [imageSide, textSide] : [textSide, imageSide]
       );
       return el(
           'div',
           {
-            className: ''
+            className: 'admin-hero'
           },
           [flexContainer, flipSides]
       );

@@ -3,7 +3,7 @@
 class HeroBlock {
   const BLOCK_NAME = 'urbanheat/hero-block';
   const ATTRIBUTES = array(
-    'sideText' => array(
+    'headingContent' => array(
       'type' => 'string'
     ),
     'sideImageId' => array(
@@ -19,10 +19,27 @@ class HeroBlock {
       'type' => 'boolean',
       'default' => TRUE,
     ),
+    'isCaption' => array(
+      'type' => 'boolean',
+      'default' => FALSE,
+    ),
+    'captionContent' => array(
+      'type' => 'string',
+    ),
+    'isCallToAction' => array(
+      'type' => 'boolean',
+      'default' => FALSE,
+    ),
+    'callToActionText' => array(
+      'type' => 'string',
+    ),
+    'callToActionUrl' => array(
+      'type' => 'string',
+    ),
   );
   function render_block( $attributes, $content ) {
     // Attribute retrieval
-    $side_text = $attributes[ 'sideText' ];
+    $heading_content = $attributes[ 'headingContent' ];
     $is_image_left = $attributes[ 'isImageLeft' ];
     $side_image_id = $attributes[ 'sideImageId' ];
     $side_image_url = $attributes[ 'sideImageUrl' ];
@@ -30,7 +47,7 @@ class HeroBlock {
 
     // Markup generation for text and image sides
     $text_content = "<div class=\"hero__content__text\">
-                       {$side_text}
+                       {$heading_content}
                      </div>";
     $image_content = "<img class=\"hero__content__image\" src=\"{$side_image_url}\" alt=\"{$side_image_alt}\">";
 

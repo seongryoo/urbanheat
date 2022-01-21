@@ -1,13 +1,16 @@
-.admin-button {
-
-}
-
-.admin-button__icon {
-  margin-right: 0.5rem;
-}
-
 .admin-hero__swap-sides {
 
+}
+
+.admin-hero label, .admin-hero textarea, .admin-hero .components-button {
+  font-family: 'OpenSans', Verdana, sans-serif;
+  font-size: 1.1325rem;
+  line-height: 1.728;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal; 
+}
+.admin-hero label {
+  
 }
 
 .admin-hero__container {
@@ -15,6 +18,16 @@
 }
 
 .admin-hero__container__side-content {
+  padding: 1rem;
   flex: 50%;
   border: 1px solid gray;
+}
+
+.admin-hero__container__side-content label {
+
+}
+
+.admin-hero__container__side-content__rich-input {
+  border: 1px solid gray;
+  padding: 0.5rem;
 }

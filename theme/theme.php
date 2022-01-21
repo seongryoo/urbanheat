@@ -6,7 +6,6 @@ class UrbanHeatATL_Theme {
     'base',
     'utils',
     'layout',
-    'text',
     'modules',
   );
   const SCRIPTS = array(
