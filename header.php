@@ -22,11 +22,10 @@
   <span id="label_mainnav" class="aria-labelledby" aria-hidden="true">
     <?php _e( 'Main menu', 'urbanheat' ); ?>
   </span>
-  <?php 
-  // Using a custom nav walker in order to generate a more accessible nested menu
+  <?php
     wp_nav_menu( array(
       'menu' => 'primary',
-      'walker' => new UrbanHeatATL_Nav_Walker()
+      'depth' => 1,
     ) );
   ?>
 </nav>
