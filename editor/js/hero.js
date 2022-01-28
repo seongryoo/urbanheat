@@ -1,7 +1,7 @@
 import { Swap, Upload } from './_icons';
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { TextareaControl, Button, Icon, TextControl } = wp.components;
+const { TextareaControl, Button, Icon, TextControl, CheckboxControl } = wp.components;
 const { createElement } = wp.element;
 const { MediaUpload, MediaUploadCheck, RichText } = wp.blockEditor;
 
@@ -93,8 +93,22 @@ registerBlockType( 'urbanheat/hero-block', {
           },
           [sideImageUploadButton, sideImagePreview]
       );
-      const optionCaption = el(Button, {onClick: () => props.setAttributes({isCaption: true}), className: 'is-secondary'}, 'Add caption');
-      const optionCallToAction = el(Button, {onClick: () => props.setAttributes({isCallToAction: true}), className: 'is-secondary'}, 'Add call-to-action');
+      const optionCaption = el(
+          CheckboxControl, 
+          {
+            label: 'Display a caption below the heading',
+            checked: props.attributes.isCaption,
+            onChange: (value) => props.setAttributes({isCaption: value}), 
+          }
+      );
+      const optionCallToAction = el(
+          CheckboxControl, 
+          {
+            label: 'Display a call-to-action button',
+            checked: props.attributes.isCallToAction,
+            onChange: (value) => props.setAttributes({isCallToAction: value}), 
+          }
+      );
       const textSide = el(
           'div',
           {

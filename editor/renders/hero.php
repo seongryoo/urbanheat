@@ -39,24 +39,27 @@ class HeroBlock {
   );
   function render_block( $attributes, $content ) {
     // Attribute retrieval
-    $heading_content = $attributes[ 'headingContent' ];
-    $caption_content = $attributes[ 'captionContent' ];
-    $is_image_left = $attributes[ 'isImageLeft' ];
-    $side_image_id = $attributes[ 'sideImageId' ];
-    $side_image_url = $attributes[ 'sideImageUrl' ];
-    $side_image_alt = $attributes[ 'sideImageAlt' ];
+    $heading_content        = $attributes[ 'headingContent' ];
+    $caption_content        = $attributes[ 'captionContent' ];
+    $call_to_action_text    = $attributes[ 'callToActionText' ];
+    $call_to_action_url     = $attributes[ 'callToActionUrl' ];
+    $is_caption             = $attributes[ 'isCaption' ];
+    $is_call_to_action      = $attributes[ 'isCallToAction' ];
+    $is_image_left          = $attributes[ 'isImageLeft' ];
+    $side_image_id          = $attributes[ 'sideImageId' ];
+    $side_image_url         = $attributes[ 'sideImageUrl' ];
+    $side_image_alt         = $attributes[ 'sideImageAlt' ];
 
     // Markup generation for text and image sides
-    $text_content = "
-                    <div class=\"hero__content__text\">
-                      <div class=\"hero__content__header\">
-                        {$heading_content}
-                      </div>
-                      <div class=\"hero__content__caption\">
-                        {$caption_content}
-                      </div>
-                    </div>
-                    ";
+    $text_content = '<div class="hero__content__text">';
+      $text_content .= '<div class="hero__content__text__header">' . $heading_content . '</div>';
+      if ( $is_caption ) {
+        $text_content .= '<div class="hero__content__text__caption">' . $caption_content . '</div>';
+      }
+      if ( $is_call_to_action ) {
+        $text_content .= "<a class=\"button hero__content__text__button\" href=\"{$call_to_action_url}\">{$call_to_action_text}</a>";
+      }
+    $text_content .= '</div>';
     $image_content = "<img class=\"hero__content__image\" src=\"{$side_image_url}\" alt=\"{$side_image_alt}\">";
 
     // Image/text direction setting
