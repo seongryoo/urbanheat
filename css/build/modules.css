@@ -1,3 +1,17 @@
+.aria-labelledby {
+  display: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -6,6 +20,10 @@
 
 .hero__content {
   flex: 50%;
+}
+
+.hero__content--left {
+  margin-right: 2.818rem;
 }
 
 .hero__content__text {
@@ -27,6 +45,43 @@
 
 .hero__content__image {
   width: 100%;
+}
+
+.link-chain {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.link-chain__link-item {
+  margin-right: 1.1325rem;
+  margin-left: 0;
+}
+
+.link-chain--flush-right {
+  justify-content: flex-end;
+}
+
+.link-chain--flush-right__link-item {
+  margin-right: 0;
+  margin-left: 1.1325rem;
+}
+
+.wall-hugger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skip-link:not(:focus) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /*# sourceMappingURL=modules.css.map */

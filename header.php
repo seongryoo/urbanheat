@@ -18,14 +18,23 @@
   </a>
 </nav>
 
-<nav aria-labelledby="label_mainnav">
-  <span id="label_mainnav" class="aria-labelledby" aria-hidden="true">
-    <?php _e( 'Main menu', 'urbanheat' ); ?>
-  </span>
-  <?php
-    wp_nav_menu( array(
-      'menu' => 'primary',
-      'depth' => 1,
-    ) );
-  ?>
-</nav>
+<header>
+  <div class="header-content contained wall-hugger">
+    <a class="site-title" href="/">
+      UrbanHeatATL
+    </a>
+    <nav aria-labelledby="label_mainnav">
+      <span id="label_mainnav" class="aria-labelledby" aria-hidden="true">
+        <?php _e( 'Main menu', 'urbanheat' ); ?>
+      </span>
+      <?php
+        wp_nav_menu( array(
+          'menu' => 'primary',
+          'depth' => 1,
+          'container' => false,
+          'menu_class' => 'menu menu--primary link-chain link-chain--flush-right',
+        ) );
+      ?>
+    </nav>
+  </div>
+</header>

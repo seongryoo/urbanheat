@@ -67,8 +67,19 @@ class UrbanHeatATL_Theme {
       register_nav_menus( $menu_locations );
     } );
   }
+  function filters__theme() {
+    add_filter( 'wp_nav_menu_objects', function( $items, $args ) {
+      if ( $args->menu == 'primary' ) {
+        foreach ( $items as $item ) {
+          array_push( $item->classes, 'link-chain__link-item link-chain--flush-right__link-item' );
+        }
+      }
+      return $items;
+    }, 10, 2 );
+  }
   function __construct() {
     $this->actions__general();
     $this->actions__theme();
+    $this->filters__theme();
   }
 }

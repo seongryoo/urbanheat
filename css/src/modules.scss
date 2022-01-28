@@ -1,6 +1,8 @@
 @use 'scale';
 @use 'text-styles';
+@use 'utils';
 
+// Hero
 .hero {
   display: flex;
   align-items: center;
@@ -8,6 +10,9 @@
 }
 .hero__content {
   flex: 50%;
+}
+.hero__content--left {
+  margin-right: scale.$med-space;
 }
 .hero__content__text {
   margin: scale.$big-space 0;
@@ -18,4 +23,37 @@
 }
 .hero__content__image {
   width: 100%;
+}
+
+// Link chain
+.link-chain {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+.link-chain__link-item {
+  margin-right: scale.$lil-space;
+  margin-left: 0;
+}
+.link-chain--flush-right {
+  justify-content: flex-end;
+}
+.link-chain--flush-right__link-item {
+  margin-right: 0;
+  margin-left: scale.$lil-space;
+}
+
+// for divs which contain two children flush left and right
+.wall-hugger {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Skip link styling
+.skip-link {
+  &:not(:focus) {
+    @include utils.visually-hidden();
+  }
 }
