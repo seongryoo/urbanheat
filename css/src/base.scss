@@ -11,3 +11,14 @@ body {
 h1 {
   @include text-styles.main-header;
 }
+a {
+  @include text-styles.paragraph;
+  text-decoration: none;
+  border-bottom: scale.$thin solid colors.$grapefruit;
+  transition: background 0.25s, border-bottom 0.05s;
+}
+a:hover, a:focus {
+  background: colors.$grapefruit;
+  border-bottom: scale.$teeny solid colors.$dusk;
+  color: black;
+}

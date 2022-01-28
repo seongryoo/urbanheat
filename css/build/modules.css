@@ -20,14 +20,11 @@
 
 .hero__content {
   flex: 50%;
+  margin: 4.0579375rem 0;
 }
 
 .hero__content--left {
   margin-right: 2.818rem;
-}
-
-.hero__content__text {
-  margin: 4.0579375rem 0;
 }
 
 .hero__content__text__header {
@@ -104,6 +101,34 @@
 .button:hover, .button:focus {
   background: #214070;
   color: white;
+}
+
+.content-bar {
+  height: 4.0579375rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header a {
+  border-bottom-width: 0;
+}
+.header a:hover {
+  border-bottom-width: 0.3160625rem;
+}
+
+.header a[aria-current] {
+  border-bottom-width: 0.18291rem;
+  border-bottom-color: #214070;
+}
+.header a[aria-current]:hover {
+  border-bottom-width: 0.3160625rem;
+}
+
+.site-title {
+  font-weight: 800;
+  font-size: 1.359rem;
+  letter-spacing: -0.05em;
 }
 
 /*# sourceMappingURL=modules.css.map */

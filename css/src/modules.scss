@@ -11,12 +11,12 @@
 }
 .hero__content {
   flex: 50%;
+  margin: scale.$large 0;
 }
 .hero__content--left {
   margin-right: scale.$medium;
 }
 .hero__content__text {
-  margin: scale.$large 0;
 }
 .hero__content__text__header {
   @include text-styles.main-header;
@@ -82,4 +82,33 @@
     background: colors.$dusk;
     color: white;
   }
+}
+
+// Module representing a single-line padded bar
+.content-bar {
+  height: scale.$large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// Header styling
+.header a {
+  border-bottom-width: 0;
+  &:hover {
+    border-bottom-width: scale.$teeny;
+  }
+}
+.header a[aria-current] {
+  border-bottom-width: scale.$thin;
+  border-bottom-color: colors.$dusk;
+  &:hover {
+    border-bottom-width: scale.$teeny;
+  }
+}
+
+.site-title {
+  font-weight: 800;
+  font-size: scale.$font-size-db-b;
+  letter-spacing: -0.05em;
 }

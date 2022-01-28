@@ -18,8 +18,8 @@
   </a>
 </nav>
 
-<header>
-  <div class="header-content contained wall-hugger">
+<header class="header">
+  <div class="header-content contained wall-hugger content-bar">
     <a class="site-title" href="/">
       UrbanHeatATL
     </a>

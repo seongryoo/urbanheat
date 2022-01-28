@@ -29,4 +29,28 @@ h1 {
   }
 }
 
+a {
+  font-family: "OpenSans", Verdana, sans-serif;
+  font-size: 1.1325rem;
+  line-height: 1.728;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  color: #214070;
+  text-decoration: none;
+  border-bottom: 0.18291rem solid #FFA07A;
+  transition: background 0.25s, border-bottom 0.05s;
+}
+@media (max-width: 22.5rem) {
+  a {
+    font-size: 1.1325rem;
+    line-height: 1.728;
+  }
+}
+
+a:hover, a:focus {
+  background: #FFA07A;
+  border-bottom: 0.3160625rem solid #214070;
+  color: black;
+}
+
 /*# sourceMappingURL=base.css.map */

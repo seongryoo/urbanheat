@@ -116,8 +116,10 @@ registerBlockType( 'urbanheat/hero-block', {
           },
           [
             headingContentInput, 
-            !props.attributes.isCaption ? optionCaption : captionContent, 
-            !props.attributes.isCallToAction ? optionCallToAction : callToAction,
+            optionCaption,
+            !props.attributes.isCaption ? null : captionContent, 
+            optionCallToAction,
+            !props.attributes.isCallToAction ? null : callToAction,
           ]
       );
       const flipSides = el(
