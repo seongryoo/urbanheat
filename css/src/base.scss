@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'layouting';
 @use 'scale';
 @use 'text-styles';
 
@@ -21,4 +22,8 @@ a:hover, a:focus {
   background: colors.$grapefruit;
   border-bottom: scale.$teeny solid colors.$dusk;
   color: black;
+}
+p {
+  max-width: layouting.$canvas-d * 0.70;
+  margin: 0 auto;
 }

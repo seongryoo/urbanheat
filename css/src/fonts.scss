@@ -1,6 +1,5 @@
-@mixin open-sans($trailer, $svg-hash, $font-weight, $font-style) {
-  font-family: "OpenSans";
-  $font-path: "../fonts/opensans";
+@mixin fontkit($font-family, $font-path, $trailer, $svg-hash, $font-weight, $font-style) {
+  font-family: $font-family;
   src: url("#{$font-path}-#{$trailer}.eot");
   src: url("#{$font-path}-#{$trailer}.eot?#iefix") format("embedded-opentype"),
        url("#{$font-path}-#{$trailer}.woff2") format("woff2"),
@@ -12,32 +11,38 @@
 }
 
 @font-face {
-  @include open-sans("bold", "#OpenSansbold", bold, normal);
+  @include fontkit("OpenSans", "../fonts/opensans", "bold", "#OpenSansbold", bold, normal);
 }
 @font-face {
-  @include open-sans("bolditalic", "#OpenSansbold_italic", bold, italic);
+  @include fontkit("OpenSans", "../fonts/opensans", "bolditalic", "#OpenSansbold_italic", bold, italic);
 }
 @font-face {
-  @include open-sans("extrabold", "#OpenSansextrabold", 800, normal);
+  @include fontkit("OpenSans", "../fonts/opensans", "extrabold", "#OpenSansextrabold", 800, normal);
 }
 @font-face {
-  @include open-sans("extrabolditalic", "#OpenSansextrabold_italic", 800, italic);
+  @include fontkit("OpenSans", "../fonts/opensans", "extrabolditalic", "#OpenSansextrabold_italic", 800, italic);
 }
 @font-face {
-  @include open-sans("italic", "#OpenSansitalic", normal, italic);
+  @include fontkit("OpenSans", "../fonts/opensans", "italic", "#OpenSansitalic", normal, italic);
 }
 @font-face {
-  @include open-sans("light", "#OpenSanslight", normal, normal);
+  @include fontkit("OpenSans", "../fonts/opensans", "light", "#OpenSanslight", normal, normal);
 }
 @font-face {
-  @include open-sans("lightitalic", "#OpenSanslight_italic", normal, italic);
+  @include fontkit("OpenSans", "../fonts/opensans", "lightitalic", "#OpenSanslight_italic", normal, italic);
 }
 @font-face {
-  @include open-sans("regular", "#OpenSansregular", normal, normal);
+  @include fontkit("OpenSans", "../fonts/opensans", "regular", "#OpenSansregular", normal, normal);
 }
 @font-face {
-  @include open-sans("semibold", "#OpenSanssemibold", 500, normal);
+  @include fontkit("OpenSans", "../fonts/opensans", "semibold", "#OpenSanssemibold", 500, normal);
 }
 @font-face {
-  @include open-sans("semibolditalic", "#OpenSanssemibold_italic", 500, italic);
+  @include fontkit("OpenSans", "../fonts/opensans", "semibolditalic", "#OpenSanssemibold_italic", 500, italic);
+}
+@font-face {
+  @include fontkit("Montserrat", "../fonts/montserrat", "regular-webfont", "#montserratregular", normal, normal);
+}
+@font-face {
+  @include fontkit("Montserrat", "../fonts/montserrat", "italic-webfont", "#montserratitalic", normal, italic);
 }
