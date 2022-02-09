@@ -1,0 +1,24 @@
+{
+  "name": "urbanheat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass css/src:css/build",
+    "prefix": "postcss --use=autoprefixer --replace css/build/*.css",
+    "build:both": "npm run build:sass && npm run prefix",
+    "start": "onchange \"css/src/**/*.scss\" -- npm run build:both"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.7"
+  },
+  "browserslist": [
+    "defaults",
+    "last 5 version"
+  ]
+}
