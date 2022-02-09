@@ -4,6 +4,7 @@
 // dh: desktop-heading
 // mb: mobile-body
 // mh: mobile-heading
+@use 'sass:math';
 
 $font-size-db: 1.1325rem;
 $font-size-dh: 2.818rem;
@@ -21,8 +22,8 @@ $medium: 2.348375rem;
 $little: 1.1325rem;
 
 $teeny: 0.3160625rem;
-$thin:0.18291rem;
+$thin: 0.18291rem;
 
-$break-s: 360rem/16;
-$break-m: 900rem/16;
-$break-l: 1440rem/16;
+$break-s: math.div(360rem, 16);
+$break-m: math.div(900rem, 16);
+$break-l: math.div(1440rem, 16);

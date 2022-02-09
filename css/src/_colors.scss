@@ -16,21 +16,6 @@ $salmon: rgb(255, 102, 97);
   @return rgba(255, 102, 97, $alpha);
 }
 
-@mixin gradient-bg($angle, $color1, $distance1, $color2, $distance2) {
- background: $color1;
- background: -moz-linear-gradient($angle, $color1 $distance1, $color2 $distance2);
- background: -webkit-linear-gradient($angle, $color1 $distance1, $color2 $distance2);
- background: linear-gradient($angle, $color1 $distance1, $color2 $distance2);
- filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color1}",endColorstr="#{$color2}",GradientType=1); 
-}
-@mixin gradient-bg($angle, $color1, $distance1, $color2, $distance2, $color3, $distance3) {
-  background: $color1;
-  background: -moz-linear-gradient($angle, $color1 $distance1, $color2 $distance2, $color3 $distance3);
-  background: -webkit-linear-gradient($angle, $color1 $distance1, $color2 $distance2, $color3 $distance3);
-  background: linear-gradient($angle, $color1 $distance1, $color2 $distance2, $color3 $distance3);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color1}",endColorstr="#{$color3}",GradientType=1); 
- }
-
 @mixin heatwave-bg {
-  @include gradient-bg(45deg, $dusk, 20%, $salmon, 50%, $lemon, 100%);
+  background: linear-gradient(45deg, $dusk 20%, $salmon 50%, $lemon 100%);
 }
