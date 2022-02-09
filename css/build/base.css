@@ -24,7 +24,7 @@ h1 {
 }
 @media (max-width: 22.5rem) {
   h1 {
-    font-size: 2.818rem;
+    font-size: 2.348375rem;
     line-height: 1.2;
   }
 }
@@ -37,7 +37,7 @@ a {
   font-kerning: normal;
   color: #214070;
   text-decoration: none;
-  border-bottom: 0.18291rem solid #FFA07A;
+  border-bottom: 0.18291rem solid lightsalmon;
   transition: background 0.25s, border-bottom 0.05s;
 }
 @media (max-width: 22.5rem) {
@@ -48,14 +48,16 @@ a {
 }
 
 a:hover, a:focus {
-  background: #FFA07A;
+  background: rgba(255, 160, 122, 0.75);
   border-bottom: 0.3160625rem solid #214070;
   color: black;
 }
 
 p {
   max-width: 840px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.348375rem;
 }
 
 /*# sourceMappingURL=base.css.map */

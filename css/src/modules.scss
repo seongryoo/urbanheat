@@ -57,6 +57,20 @@
 
 // Skip link styling
 .skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: scale.$medium 0;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 25px 0 colors.dusk(0.5);
+  text-align: center;
+  &:focus {
+    border: none;
+    background: colors.dusk(0.95);
+    color: white;
+  }
   &:not(:focus) {
     @include utils.visually-hidden();
   }
@@ -69,18 +83,45 @@
   color: colors.$dusk;
   font-weight: 600;
   // background: colors.$grapefruit;
+  position: relative;
   display: inline-block;
-  border-color: colors.$dusk;
-  border-width: scale.$teeny;
-  border-style: solid;
-  border-radius: scale.$little;
-  padding: 0 scale.$medium;
-  height: scale.$medium;
-  line-height: scale.$medium;
+  padding: 0 (scale.$medium + scale.$teeny * 1.44);
+  height: (scale.$medium + scale.$teeny * 1.44);
+  line-height: (scale.$medium + scale.$teeny * 1.44);
   text-decoration: none;
+  border: none;
+  background: none;
+  &:before {
+    content: '';
+    background: white;
+    position: absolute;
+    top: 1 * scale.$teeny;
+    left: 1.2 * scale.$teeny;
+    right: 1.2 * scale.$teeny;
+    bottom: 1 * scale.$teeny;
+    border-radius: scale.$little;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    @include colors.heatwave-bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: scale.$little * 1.44;
+    z-index: -2;
+    box-shadow: 0 8px 16px 0 colors.dusk(0.2);
+    transition: 0.25s box-shadow;
+    // border-bottom: 2px solid colors.$dusk;
+  }
+  &:hover:after, &focus:after {
+    box-shadow: 0 2px 6px 0 colors.dusk(0.333);
+  }
   &:hover, &:focus {
-    background: colors.$dusk;
-    color: white;
+    border: none;
+    background: none;
   }
 }
 
