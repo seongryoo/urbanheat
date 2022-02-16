@@ -7,6 +7,15 @@
   white-space: nowrap;
   width: 1px;
 }
+@mixin visible {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  position: relative;
+  white-space: inherit;
+}
 
 .aria-labelledby {
   display: none;

@@ -20,10 +20,10 @@
 
 <header class="header">
   <div class="header-content contained wall-hugger content-bar">
-    <a class="site-title" href="/">
+    <a class="site-title wall-hugger__left" href="/">
       UrbanHeatATL
     </a>
-    <nav aria-labelledby="label_mainnav">
+    <nav aria-labelledby="label_mainnav" class="wall-hugger__right">
       <span id="label_mainnav" class="aria-labelledby" aria-hidden="true">
         <?php _e( 'Main menu', 'urbanheat' ); ?>
       </span>

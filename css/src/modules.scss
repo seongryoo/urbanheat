@@ -8,23 +8,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
   width: 100%;
 }
 .hero__content {
-  width: 50%;
+  max-width: 50%;
   margin: scale.px(scale.$large) 0;
   margin: scale.$large 0;
   box-sizing: border-box;
 }
-// .hero__content--left {
-//   padding-right: scale.px(scale.$medium) * 0.5;
-//   padding-right: scale.$medium * 0.5;
-// }
-// .hero__content--right {
-//   padding-left: scale.px(scale.$medium) * 0.5;
-//   padding-left: scale.$medium * 0.5;
-// }
+.hero__content--left {
+  padding-right: scale.px(scale.$medium) * 0.5;
+  padding-right: scale.$medium * 0.5;
+  float: left;
+}
+.hero__content--right {
+  padding-left: scale.px(scale.$medium) * 0.5;
+  padding-left: scale.$medium * 0.5;
+  float: right;
+}
 .hero__content__text {
   
 }
@@ -44,17 +45,19 @@
 .link-chain {
   padding: 0;
   margin: 0;
-  display: inline-flex;
-  justify-content: space-between;
-  justify-content: flex-start;
+  float: left;
   list-style: none;
+  display: flex;
+  justify-content: flex-start;
 }
 .link-chain__link-item {
   margin-right: scale.px(scale.$little);
   margin-right: scale.$little;
   margin-left: 0;
+  float: left;
 }
 .link-chain--flush-right {
+  float: right;
   justify-content: flex-end;
 }
 .link-chain--flush-right__link-item {
@@ -65,23 +68,32 @@
 
 // for divs which contain two children flush left and right
 .wall-hugger {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.wall-hugger__left {
+  float: left;
+}
+.wall-hugger__right {
+  float: right;
 }
 
 // Skip link styling
 .skip-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: scale.px(scale.$medium) 0;
-  padding: scale.$medium 0;
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 8px 25px 0 colors.dusk(0.5);
-  text-align: center;
+  @include utils.visually-hidden();
   &:focus {
+    @include utils.visible();
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: scale.px(scale.$medium) 0;
+    padding: scale.$medium 0;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 25px 0 colors.dusk(0.5);
+    text-align: center;
     border: none;
     background: colors.dusk(0.95);
     color: white;
