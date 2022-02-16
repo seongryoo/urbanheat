@@ -24,6 +24,11 @@ $little: 1.1325rem;
 $teeny: 0.3160625rem;
 $thin: 0.18291rem;
 
+@function px($value) {
+  @return math.div($value, 1rem) * 16px;
+}
+
+
 $break-s: math.div(360rem, 16);
 $break-m: math.div(900rem, 16);
 $break-l: math.div(1440rem, 16);

@@ -8,14 +8,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
 }
 .hero__content {
-  flex: 50%;
+  width: 50%;
+  margin: scale.px(scale.$large) 0;
   margin: scale.$large 0;
+  box-sizing: border-box;
 }
-.hero__content--left {
-  margin-right: scale.$medium;
-}
+// .hero__content--left {
+//   padding-right: scale.px(scale.$medium) * 0.5;
+//   padding-right: scale.$medium * 0.5;
+// }
+// .hero__content--right {
+//   padding-left: scale.px(scale.$medium) * 0.5;
+//   padding-left: scale.$medium * 0.5;
+// }
 .hero__content__text {
   
 }
@@ -24,6 +33,7 @@
 }
 .hero__content__text__header,
 .hero__content__text__caption {
+  margin-bottom: scale.px(scale.$little);
   margin-bottom: scale.$little;
 }
 .hero__content__image {
@@ -35,10 +45,12 @@
   padding: 0;
   margin: 0;
   display: inline-flex;
+  justify-content: space-between;
   justify-content: flex-start;
   list-style: none;
 }
 .link-chain__link-item {
+  margin-right: scale.px(scale.$little);
   margin-right: scale.$little;
   margin-left: 0;
 }
@@ -47,6 +59,7 @@
 }
 .link-chain--flush-right__link-item {
   margin-right: 0;
+  margin-left: scale.px(scale.$little);
   margin-left: scale.$little;
 }
 
@@ -63,6 +76,7 @@
   left: 0;
   right: 0;
   width: 100%;
+  padding: scale.px(scale.$medium) 0;
   padding: scale.$medium 0;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 8px 25px 0 colors.dusk(0.5);
@@ -77,18 +91,19 @@
   }
 }
 
-// TODO: Basic button
-// Idea: represent the data within the website design! 
-// Use blocky orange outline which fades into another color, like the data itself!!
+$button-dim: scale.$medium + scale.$teeny * 1.44;
 .button {
   color: colors.$dusk;
   font-weight: 600;
   // background: colors.$grapefruit;
   position: relative;
   display: inline-block;
-  padding: 0 (scale.$medium + scale.$teeny * 1.44);
-  height: (scale.$medium + scale.$teeny * 1.44);
-  line-height: (scale.$medium + scale.$teeny * 1.44);
+  padding: 0 scale.px($button-dim);
+  padding: 0 $button-dim;
+  height: scale.px($button-dim);
+  height: $button-dim;
+  line-height: scale.px($button-dim);
+  line-height: $button-dim;
   text-decoration: none;
   border: none;
   background: none;
@@ -96,10 +111,15 @@
     content: '';
     background: white;
     position: absolute;
-    top: 1 * scale.$teeny;
+    top: scale.px(scale.$teeny);
+    top: scale.$teeny;
+    left: 1.2 * scale.px(scale.$teeny);
     left: 1.2 * scale.$teeny;
+    right: 1.2 * scale.px(scale.$teeny);
     right: 1.2 * scale.$teeny;
-    bottom: 1 * scale.$teeny;
+    bottom: scale.$teeny;
+    bottom: scale.px(scale.$teeny);
+    border-radius: scale.px(scale.$little);
     border-radius: scale.$little;
     z-index: -1;
   }
@@ -111,6 +131,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    border-radius: scale.px(scale.$little) * 1.44;
     border-radius: scale.$little * 1.44;
     z-index: -2;
     box-shadow: 0 8px 16px 0 colors.dusk(0.2);
@@ -138,10 +159,12 @@
 .header a {
   border-bottom-width: 0;
   &:hover {
+    border-bottom-width: scale.px(scale.$teeny);
     border-bottom-width: scale.$teeny;
   }
 }
 .header a[aria-current] {
+  border-bottom-width: scale.px(scale.$thin);
   border-bottom-width: scale.$thin;
   border-bottom-color: colors.$dusk;
   &:hover {
@@ -151,6 +174,7 @@
 
 .site-title {
   font-weight: 800;
+  font-size: scale.px(scale.$font-size-db-b);
   font-size: scale.$font-size-db-b;
   letter-spacing: -0.05em;
 }
