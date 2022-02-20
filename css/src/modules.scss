@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: scale.$break-m) {
+    display: block;
+  }
 }
 .hero__content {
   max-width: 50%;
@@ -20,11 +23,23 @@
   padding-right: scale.px(scale.$medium) * 0.5;
   padding-right: scale.$medium * 0.5;
   float: left;
+  @media (max-width: scale.$break-m) {
+    float: none;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
 }
 .hero__content--right {
   padding-left: scale.px(scale.$medium) * 0.5;
   padding-left: scale.$medium * 0.5;
   float: right;
+  @media (max-width: scale.$break-m) {
+    float: none;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
 }
 .hero__content__text {
   
