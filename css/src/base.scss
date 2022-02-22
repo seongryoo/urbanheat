@@ -26,6 +26,7 @@ a:hover, a:focus {
   color: black;
 }
 p {
+  // @include text-styles.paragraph-alt;
   max-width: layouting.$canvas-d * 0.70;
   max-width: layouting.$canvas-d * 0.70;
   margin-left: auto;

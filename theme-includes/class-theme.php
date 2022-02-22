@@ -9,7 +9,7 @@ class UrbanHeatATL_Theme {
     'modules',
   );
   const SCRIPTS = array(
-
+    'nav',
   );
   function actions__general() {
     // Add type="module" to scripts
