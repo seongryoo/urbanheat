@@ -140,10 +140,10 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     position: absolute;
     top: scale.px(scale.$teeny);
     top: scale.$teeny;
-    left: 1.2 * scale.px(scale.$teeny);
-    left: 1.2 * scale.$teeny;
-    right: 1.2 * scale.px(scale.$teeny);
-    right: 1.2 * scale.$teeny;
+    left: 1 * scale.px(scale.$teeny);
+    left: 1 * scale.$teeny;
+    right: 1 * scale.px(scale.$teeny);
+    right: 1 * scale.$teeny;
     bottom: scale.$teeny;
     bottom: scale.px(scale.$teeny);
     border-radius: scale.px(scale.$little);
@@ -161,12 +161,12 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     border-radius: scale.px(scale.$little) * 1.44;
     border-radius: scale.$little * 1.44;
     z-index: -2;
-    box-shadow: 0 8px 16px 0 colors.dusk(0.2);
+    box-shadow: 0 8px 16px 0 colors.dusk(0.1);
     transition: 0.25s box-shadow;
     // border-bottom: 2px solid colors.$dusk;
   }
   &:hover:after, &focus:after {
-    box-shadow: 0 2px 6px 0 colors.dusk(0.333);
+    box-shadow: 0 2px 6px 0 colors.dusk(0.2);
   }
   &:hover, &:focus {
     border: none;
@@ -196,6 +196,20 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   border-bottom-color: colors.$dusk;
   &:hover {
     border-bottom-width: scale.$teeny;
+  }
+}
+@media (max-width: scale.$break-m) {
+  .menu {
+    background: red;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 25%;
+    bottom: 0;
+  }
+  .menu--primary__link-item {
+    float: none;
   }
 }
 
