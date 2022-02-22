@@ -12,16 +12,6 @@ class UrbanHeatATL_Theme {
     'nav',
   );
   function actions__general() {
-    // Add type="module" to scripts
-    add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
-      $scripts = constant( __CLASS__ . "::SCRIPTS" );
-      foreach ( $scripts as $script ) {
-        if ( $handle == 'urbanheat-' . $script ) {
-          return '<script type="module" src="' . esc_url( $src ) . '"></script>';
-        }
-      }    
-      return $tag;
-    }, 10, 3 );
     // (Provided by Wordpress) Filter to make Wordpress 'Read More' button more accessible    
     add_filter( 'the_content_more_link', function( $html ) {
       $search_str = '/<a(.*)>(.*)<\/a>/iU';
