@@ -7,7 +7,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="body">
 
 <nav aria-labelledby="label_skiplink" class="contained">
   <span id="label_skiplink" class="aria-labelledby" aria-hidden="true">

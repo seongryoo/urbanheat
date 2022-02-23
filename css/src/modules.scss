@@ -169,10 +169,22 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     border-bottom-width: scale.$teeny;
   }
 }
+
+.site-title {
+  font-weight: 800;
+  font-size: scale.px(scale.$font-size-db-b);
+  font-size: scale.$font-size-db-b;
+  letter-spacing: -0.05em;
+}
+
+// Main menu styling
 @media (max-width: scale.$break-m) {
   .menu {
-    background: red;
+    display: none;
+  }
+  .menu--primary--open {
     display: block;
+    background: red;
     position: absolute;
     top: 0;
     left: 0;
@@ -184,9 +196,9 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   }
 }
 
-.site-title {
-  font-weight: 800;
-  font-size: scale.px(scale.$font-size-db-b);
-  font-size: scale.$font-size-db-b;
-  letter-spacing: -0.05em;
+.hamburger {
+  display: none;
+  @media (max-width: scale.$break-m) {
+    display: block;
+  }
 }

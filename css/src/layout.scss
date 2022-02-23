@@ -11,3 +11,10 @@
   padding-right: scale.$little;
   box-sizing: border-box;
 }
+
+.body--no-scroll {
+  overflow-y: scroll;
+  @media (max-width: scale.$break-m) {
+    overflow-y: hidden;
+  }
+}
