@@ -2,6 +2,7 @@
 @use 'text-styles';
 @use 'utils';
 @use 'colors';
+@use 'layouting';
 
 // Hero
 .hero {
@@ -112,6 +113,7 @@
     border: none;
     background: colors.dusk(0.95);
     color: white;
+    z-index: layouting.$z-layer--skip;
   }
   &:not(:focus) {
     @include utils.visually-hidden();
@@ -185,11 +187,12 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   .menu--primary--open {
     display: block;
     background: red;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 25%;
     bottom: 0;
+    z-index: layouting.$z-layer--menu;
   }
   .menu--primary__link-item {
     float: none;
