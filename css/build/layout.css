@@ -6,7 +6,8 @@
   padding-left: 1.1325rem;
   padding-right: 18.12px;
   padding-right: 1.1325rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .body--no-scroll {
@@ -18,4 +19,4 @@
   }
 }
 
-/*# sourceMappingURL=layout.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9sYXlvdXQuc2NzcyIsIi4uL3NyYy9fbGF5b3V0aW5nLnNjc3MiLCIuLi9zcmMvX3NjYWxlLnNjc3MiLCJsYXlvdXQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0VBQ0UsaUJDSlM7RURLVCxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EscUJBQUE7RUFDQSx1QkVhTztFRlpQLHNCQUFBO0VBQ0Esd0JFV087RUZWUCw4QkFBQTtVQUFBLHNCQUFBO0FHRkY7O0FIS0E7RUFDRSxrQkFBQTtBR0ZGO0FIR0U7RUFGRjtJQUdJLGtCQUFBO0VHQUY7QUFDRiIsImZpbGUiOiJsYXlvdXQuY3NzIn0= */
