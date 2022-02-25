@@ -57,7 +57,7 @@ class HeroBlock {
         $text_content .= '<div class="hero__content__text__caption">' . $caption_content . '</div>';
       }
       if ( $is_call_to_action ) {
-        $text_content .= "<a class=\"button hero__content__text__button\" href=\"{$call_to_action_url}\">{$call_to_action_text}</a>";
+        $text_content .= "<a class=\"button button--gradient hero__content__text__button\" href=\"{$call_to_action_url}\">{$call_to_action_text}</a>";
       }
     $text_content .= '</div>';
     $image_content = "<img class=\"hero__content__image\" src=\"{$side_image_url}\" alt=\"{$side_image_alt}\">";

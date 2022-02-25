@@ -21,7 +21,7 @@ $large: 5.8434048rem;
 $medium: 2.348375rem;
 $little: 1.1325rem;
 
-$teeny: 0.3160625rem;
+$teeny: 1.2 * 0.3160625rem;
 $thin: 0.18291rem;
 
 @function px($value) {
