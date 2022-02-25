@@ -49,8 +49,8 @@
   @include text-styles.main-header;
 }
 .hero__content__text__caption {
-  margin-bottom: scale.px(scale.$little);
-  margin-bottom: scale.$little;
+  margin: scale.px(scale.$little) 0;
+  margin: scale.$little 0;
 }
 .hero__content__text__button--no-caption {
   margin-top: scale.px(scale.$medium);
