@@ -19,7 +19,7 @@
 </nav>
 
 <header class="header">
-  <div class="header-content contained wall-hugger content-bar">
+  <div class="header__header-content contained wall-hugger content-bar">
     <a class="site-title wall-hugger__left" href="/">
       UrbanHeatATL
     </a>
@@ -55,10 +55,10 @@
         </span>
         <?php
           wp_nav_menu( array(
-            'menu' => 'primary',
-            'depth' => 1,
-            'container' => false,
-            'menu_class' => 'menu menu--primary link-chain link-chain--flush-right',
+            'menu'          => 'primary',
+            'depth'         => 1,
+            'container'     => false,
+            'menu_class'    => 'menu menu--primary link-chain link-chain--flush-right',
           ) );
         ?>
       </nav>

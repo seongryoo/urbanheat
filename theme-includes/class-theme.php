@@ -61,7 +61,22 @@ class UrbanHeatATL_Theme {
     add_filter( 'wp_nav_menu_objects', function( $items, $args ) {
       if ( $args->menu == 'primary' ) {
         foreach ( $items as $item ) {
-          array_push( $item->classes, 'menu--primary__link-item link-chain__link-item link-chain--flush-right__link-item' );
+          array_push( 
+            $item->classes, 
+            'menu-link',
+            'menu--primary__link-item', 
+            'link-chain__link-item', 
+            'link-chain--flush-right__link-item' 
+          );
+        }
+      }
+      if ( $args->menu == 'footer' ) {
+        foreach ( $items as $item ) {
+          array_push( 
+            $item->classes, 
+            'menu--footer__link-item', 
+            'menu-link--inverted' 
+          );
         }
       }
       return $items;

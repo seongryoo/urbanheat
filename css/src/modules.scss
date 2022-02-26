@@ -263,3 +263,35 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     display: block;
   }
 }
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link a {
+  display: inline-block;
+}
+
+.menu-link--inverted a { //sorry for cascade
+  color: white;
+  border: none;
+  &:hover, &:focus {
+    color: colors.$grapefruit;
+    background: none;
+  }
+}
+
+.footer {
+  background: colors.$dusk;
+  padding: scale.px(scale.$medium) 0;
+  padding: scale.$medium 0;
+  margin-top: auto;
+  display: block;
+}
+.menu--footer__link-item {
+  line-height: scale.$line-height-db;
+  margin-bottom: scale.px(scale.$teeny);
+  margin-bottom: scale.$teeny;
+}

@@ -8,6 +8,9 @@ body, h1, h2, h3, h4, h6, p {
 }
 body {
   @include text-styles.paragraph;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   @include text-styles.main-header;
