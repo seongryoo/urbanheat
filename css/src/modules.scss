@@ -170,12 +170,12 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     position: absolute;
     top: scale.px(scale.$teeny);
     top: scale.$teeny;
-    left: 1 * scale.px(scale.$teeny);
-    left: 1 * scale.$teeny;
-    right: 1 * scale.px(scale.$teeny);
-    right: 1 * scale.$teeny;
-    bottom: scale.$teeny;
+    left: scale.px(scale.$teeny);
+    left: scale.$teeny;
+    right: scale.px(scale.$teeny);
+    right: scale.$teeny;
     bottom: scale.px(scale.$teeny);
+    bottom: scale.$teeny;
     border-radius: scale.px(scale.$small) * 1.44;
     border-radius: scale.$small * 1.44;
     z-index: -1;
@@ -236,10 +236,14 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   font-size: scale.$font-size-db-b;
   letter-spacing: -0.05em;
 }
+.site-title-wrapper--footer {
+  margin-bottom: scale.px(scale.$small);
+  margin-bottom: scale.$small;
+}
 
 // Main menu styling
 @media (max-width: scale.$break-m) {
-  .menu {
+  .menu--primary {
     display: none;
   }
   .menu--primary--open {
@@ -274,7 +278,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 
 }
 
-.menu-link--inverted a { //sorry for cascade
+.inverted a { //sorry for cascade
   color: white;
   border-bottom-width: 0;
   transition: color 0.25s, border-bottom-width 0.05s;
@@ -293,10 +297,16 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   margin-top: auto;
   display: block;
 }
-.menu--footer__link-item {
+.menu--footer__link-item,
+.menu--socials__link-item {
   line-height: scale.$line-height-db;
   margin-bottom: scale.px(scale.$teeny);
   margin-bottom: scale.$teeny;
+}
+.menu--socials__link-item a[href*="twitter"]::before {
+  border: 1px solid red;
+  font-family: 'FontAwesome';
+  content: "\f099";
 }
 
 .windsock {
@@ -328,9 +338,19 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   &:hover, &:focus {
     border: none;
     background: none;
-    .logo-link__img {
-      width: 120%;
-      border: 5px solid yellow;
-    }
+    opacity: 0.75;
   }
+}
+
+.flex-row {
+  display: flex;
+}
+.flex-row__bead {
+  margin-right: scale.px(scale.$small);
+  margin-right: scale.$small;
+  float: left;
+}
+.flex-row--stretched__bead {
+  margin-right: scale.px(scale.$medium);
+  margin-right: scale.$medium;
 }

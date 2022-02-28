@@ -74,8 +74,15 @@ class UrbanHeatATL_Theme {
         foreach ( $items as $item ) {
           array_push( 
             $item->classes, 
-            'menu--footer__link-item', 
-            'menu-link--inverted' 
+            'menu--footer__link-item'
+          );
+        }
+      }
+      if ( $args->menu == 'socials' ) {
+        foreach ( $items as $item ) {
+          array_push( 
+            $item->classes, 
+            'menu--socials__link-item'
           );
         }
       }
