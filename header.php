@@ -20,9 +20,11 @@
 
 <header class="header">
   <div class="header__header-content contained wall-hugger content-bar">
-    <a class="site-title wall-hugger__left" href="/">
-      UrbanHeatATL
-    </a>
+    <div class="wall-hugger__left">
+      <a class="site-title" href="/">
+        UrbanHeatATL
+      </a>
+    </div>
 
     <div class="wall-hugger__right">
       <button

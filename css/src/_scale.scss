@@ -17,9 +17,12 @@ $line-height-dh: 1.2;
 $line-height-mb: 1.728;
 $line-height-mh: 1.2;
 
+$line-height-rem: $font-size-db * $line-height-db;
+$six-lines: 6 * $line-height-rem;
+
 $large: 5.8434048rem;
 $medium: 2.348375rem;
-$little: 1.1325rem;
+$small: 1.1325rem;
 
 $teeny: 1.2 * 0.3160625rem;
 $thin: 0.18291rem;

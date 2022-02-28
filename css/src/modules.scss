@@ -49,8 +49,8 @@
   @include text-styles.main-header;
 }
 .hero__content__text__caption {
-  margin: scale.px(scale.$little) 0;
-  margin: scale.$little 0;
+  margin: scale.px(scale.$small) 0;
+  margin: scale.$small 0;
 }
 .hero__content__text__button--no-caption {
   margin-top: scale.px(scale.$medium);
@@ -70,8 +70,8 @@
   justify-content: flex-start;
 }
 .link-chain__link-item {
-  margin-right: scale.px(scale.$little);
-  margin-right: scale.$little;
+  margin-right: scale.px(scale.$small);
+  margin-right: scale.$small;
   margin-left: 0;
   float: left;
 }
@@ -81,8 +81,8 @@
 }
 .link-chain--flush-right__link-item {
   margin-right: 0;
-  margin-left: scale.px(scale.$little);
-  margin-left: scale.$little;
+  margin-left: scale.px(scale.$small);
+  margin-left: scale.$small;
 }
 
 // for divs which contain two children flush left and right
@@ -138,8 +138,8 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   line-height: $button-dim;
   text-decoration: none;
   
-  border-radius: scale.px(scale.$little);
-  border-radius: scale.$little;
+  border-radius: scale.px(scale.$small);
+  border-radius: scale.$small;
   border: none;
   transition: 0.25s box-shadow, 0.25s background, 0.25s color;
   box-shadow: 0 8px 12px 0 colors.dusk(0.1);
@@ -176,8 +176,8 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     right: 1 * scale.$teeny;
     bottom: scale.$teeny;
     bottom: scale.px(scale.$teeny);
-    border-radius: scale.px(scale.$little) * 1.44;
-    border-radius: scale.$little * 1.44;
+    border-radius: scale.px(scale.$small) * 1.44;
+    border-radius: scale.$small * 1.44;
     z-index: -1;
   }
   &:after {
@@ -188,8 +188,8 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: scale.px(scale.$little) * 1.44;
-    border-radius: scale.$little * 1.44;
+    border-radius: scale.px(scale.$small) * 1.44;
+    border-radius: scale.$small * 1.44;
     z-index: -2;
     box-shadow: 0 8px 16px 0 colors.dusk(0.2);
     transition: 0.25s box-shadow;
@@ -271,14 +271,17 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 }
 
 .menu-link a {
-  display: inline-block;
+
 }
 
 .menu-link--inverted a { //sorry for cascade
   color: white;
-  border: none;
+  border-bottom-width: 0;
+  transition: color 0.25s, border-bottom-width 0.05s;
   &:hover, &:focus {
     color: colors.$grapefruit;
+    border-bottom: scale.px(scale.$teeny) solid colors.$grapefruit;
+    border-bottom: scale.$teeny solid colors.$grapefruit;
     background: none;
   }
 }
@@ -294,4 +297,34 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   line-height: scale.$line-height-db;
   margin-bottom: scale.px(scale.$teeny);
   margin-bottom: scale.$teeny;
+}
+
+.windsock {
+  display: flex;
+}
+.windsock__left {
+  margin-right: scale.$medium;
+}
+.windsock__image {
+  width: scale.$large;
+  height: 100%;
+}
+.windsock__image__img {
+  width: 100%;
+}
+.windsock__content {
+
+}
+
+.logo-link {
+  border: none;
+  background: none;
+  &:hover, &:focus {
+    border: none;
+    background: none;
+    .logo-link__img {
+      width: 120%;
+      border: 5px solid yellow;
+    }
+  }
 }

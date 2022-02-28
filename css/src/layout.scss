@@ -5,9 +5,9 @@
   max-width: layouting.$canvas-d;
   margin-left: auto;
   margin-right: auto;
-  padding-left: scale.px(scale.$little);
-  padding-left: scale.$little;
-  padding-right: scale.px(scale.$little);
-  padding-right: scale.$little;
+  padding-left: scale.px(scale.$small);
+  padding-left: scale.$small;
+  padding-right: scale.px(scale.$small);
+  padding-right: scale.$small;
   box-sizing: border-box;
 }
