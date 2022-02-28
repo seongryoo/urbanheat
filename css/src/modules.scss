@@ -294,7 +294,8 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   background: colors.$dusk;
   padding: scale.px(scale.$medium) 0;
   padding: scale.$medium 0;
-  margin-top: auto;
+  margin-top: scale.px(scale.$medium);
+  margin-top: scale.$medium;
   display: block;
 }
 .menu--footer__link-item,
@@ -351,6 +352,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 .logo-link {
   border: none;
   background: none;
+  transition: 0.25s opacity;
   &:hover, &:focus {
     border: none;
     background: none;
