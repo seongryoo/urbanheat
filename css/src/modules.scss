@@ -303,10 +303,26 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   margin-bottom: scale.px(scale.$teeny);
   margin-bottom: scale.$teeny;
 }
+@mixin auto-icon($char) {
+  font-family: "FontAwesome";
+  margin-right: scale.px(scale.$teeny);
+  margin-right: scale.$teeny;
+  width: scale.px(scale.$small);
+  width: scale.$small;
+  display: inline-block;
+  content: $char;
+}
 .menu--socials__link-item a[href*="twitter"]::before {
-  border: 1px solid red;
-  font-family: 'FontAwesome';
-  content: "\f099";
+  @include auto-icon("\f099");
+}
+.menu--socials__link-item a[href*="facebook"]::before {
+  @include auto-icon("\f082");
+}
+.menu--socials__link-item a[href*="youtube"]::before {
+  @include auto-icon("\f16a");
+}
+.menu--socials__link-item a[href*="instagram"]::before {
+  @include auto-icon("\f16d");
 }
 
 .windsock {
