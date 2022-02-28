@@ -37,18 +37,20 @@
         <span id="label_burger" class="aria-labelledby" aria-hidden="true">
           <?php _e( 'Open main menu', 'urbanheat' ); ?>
         </span>
-        <svg viewBox="0 0 40 40"
+        <svg 
+          class="hamburger__icon"
+          viewBox="0 0 40 40"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
           role="icon"
         >
-          <g>
+          <g class="hamburger__icon__group">
             <path class="bar-1" d="M4 4h32v8H4z" role="presentation"></path>
             <path class="bar-2" d="M4 16h32v8H4z" role="presentation"></path>
             <path class="bar-3" d="M4 28h32v8H4z" role="presentation"></path>
           </g>
         </svg>
-        <span class="burger-text">Menu</span>
+        <span class="hamburger__text">Menu</span>
       </button>
 
       <nav id="nav-menu" aria-labelledby="label_mainnav" data-uha-interface="menu">

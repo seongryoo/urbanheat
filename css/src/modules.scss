@@ -263,9 +263,23 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 
 .hamburger {
   display: none;
-  @media (max-width: scale.$break-m) {
-    display: block;
+  border: none;
+  background: none;
+  @include text-styles.paragraph;
+  &:hover {
+    cursor: pointer;
   }
+  @media (max-width: scale.$break-m) {
+    display: flex block;
+    align-items: center;
+  }
+}
+.hamburger__icon {
+  margin-right: scale.px(scale.$teeny);
+  margin-right: scale.$teeny;
+}
+.hamburger__icon__group {
+  fill: colors.$dusk;
 }
 
 .menu {
@@ -362,11 +376,23 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 
 .flex-row {
   display: flex;
+  @media (max-width: scale.$break-m) {
+    flex-direction: column;
+  }
 }
 .flex-row__bead {
   margin-right: scale.px(scale.$small);
   margin-right: scale.$small;
   float: left;
+  @media (max-width: scale.$break-m) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: scale.px(scale.$small);
+    margin-bottom: scale.$small;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
 }
 .flex-row--stretched__bead {
   margin-right: scale.px(scale.$medium);
