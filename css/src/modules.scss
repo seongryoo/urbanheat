@@ -303,8 +303,12 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   display: flex;
 }
 .windsock__left {
-  margin-right: scale.px(scale.$medium);
-  margin-right: scale.$medium;
+  margin-right: scale.px(scale.$medium) * 0.5;
+  margin-right: scale.$medium * 0.5;
+}
+.windsock__right {
+  margin-left: scale.px(scale.$medium) * 0.5;
+  margin-left: scale.$medium * 0.5;
 }
 .windsock__image {
   width: scale.px(scale.$large);

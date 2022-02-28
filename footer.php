@@ -11,7 +11,7 @@
         class="logo-link__img windsock__image__img"
       >
     </a>
-    <nav aria-labelledby="label_footernav" class="windsock__content">
+    <nav aria-labelledby="label_footernav" class="windsock__content windsock__right">
       <span id="label_footernav" class="aria-labelledby" aria-hidden="true">
         <?php _e( 'Footer navigation', 'urbanheat' ); ?>
       </span>
