@@ -242,7 +242,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 }
 
 // Main menu styling
-@media (max-width: scale.$break-m) {
+@media (max-width: scale.$break-s) {
   .menu--primary {
     display: none;
   }
@@ -269,7 +269,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   &:hover {
     cursor: pointer;
   }
-  @media (max-width: scale.$break-m) {
+  @media (max-width: scale.$break-s) {
     display: flex block;
     align-items: center;
   }
@@ -376,7 +376,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 
 .flex-row {
   display: flex;
-  @media (max-width: scale.$break-m) {
+  @media (max-width: scale.$break-s) {
     flex-direction: column;
   }
 }
@@ -384,7 +384,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   margin-right: scale.px(scale.$small);
   margin-right: scale.$small;
   float: left;
-  @media (max-width: scale.$break-m) {
+  @media (max-width: scale.$break-s) {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: scale.px(scale.$small);

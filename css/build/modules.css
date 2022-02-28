@@ -25,7 +25,7 @@
           justify-content: space-between;
   width: 100%;
 }
-@media (max-width: 45rem) {
+@media (max-width: 56.25rem) {
   .hero {
     display: block;
   }
@@ -44,7 +44,7 @@
   padding-right: 1.1741875rem;
   float: left;
 }
-@media (max-width: 45rem) {
+@media (max-width: 56.25rem) {
   .hero__content--left {
     float: none;
     width: 100%;
@@ -58,7 +58,7 @@
   padding-left: 1.1741875rem;
   float: right;
 }
-@media (max-width: 45rem) {
+@media (max-width: 56.25rem) {
   .hero__content--right {
     float: none;
     width: 100%;
@@ -78,7 +78,7 @@
   line-height: 1.2;
   font-weight: 800;
 }
-@media (max-width: 22.5rem) {
+@media (max-width: 45rem) {
   .hero__content__text__header {
     font-size: 37.574px;
     font-size: 2.348375rem;
@@ -368,7 +368,7 @@
   font-size: 1.1325rem;
   line-height: 1.728;
 }
-@media (max-width: 22.5rem) {
+@media (max-width: 45rem) {
   .hamburger {
     font-size: 18.12px;
     font-size: 1.1325rem;

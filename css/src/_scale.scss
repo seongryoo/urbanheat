@@ -31,7 +31,7 @@ $thin: 0.18291rem;
   @return math.div($value, 1rem) * 16px;
 }
 
-
-$break-s: math.div(360rem, 16);
-$break-m: math.div(720rem, 16);
+$break-xs: math.div(360rem, 16);
+$break-s: math.div(720rem, 16);
+$break-m: math.div(900rem, 16);
 $break-l: math.div(1440rem, 16);
