@@ -264,6 +264,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 .hamburger {
   display: none;
   border: none;
+  padding: 0;
   background: none;
   @include text-styles.paragraph;
   &:hover {
