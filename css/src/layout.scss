@@ -54,19 +54,13 @@
 // Content Bar
 // Module representing a single-line padded bar
 .content-bar {
-  padding-top: scale.px(scale.$medium);
-  padding-top: scale.$medium;
-  padding-bottom: scale.px(scale.$medium);
-  padding-bottom: scale.$medium;
+  padding-top: scale.px(scale.$small);
+  padding-top: scale.$small;
+  padding-bottom: scale.px(scale.$small);
+  padding-bottom: scale.$small;
   display: flex;
   flex-direction: row;
   align-items: center;
-  @media (max-width: scale.$break-s) {   
-    padding-top: scale.px(scale.$small);
-    padding-top: scale.$small;
-    padding-bottom: scale.px(scale.$small);
-    padding-bottom: scale.$small;
-  }
 }
 
 // Windsock
