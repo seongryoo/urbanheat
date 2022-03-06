@@ -197,7 +197,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 
 // Main menu styling when in hamburger mode
 @media (max-width: scale.$break-s) {
-  .menu--primary {
+  .menu-wrapper--hidden {
     display: none;
   }
   .menu--primary--open {

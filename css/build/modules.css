@@ -270,7 +270,7 @@
 }
 
 @media (max-width: 45rem) {
-  .menu--primary {
+  .menu-wrapper--hidden {
     display: none;
   }
 

@@ -30,7 +30,7 @@
       <button
         aria-labelledby="label_burger"
         class="hamburger"
-        aria-controls="nav-menu"
+        aria-haspopup="true"
         aria-expanded="false"
         data-uha-interface="burger"
       >
@@ -53,7 +53,12 @@
         <span class="hamburger__text">Menu</span>
       </button>
 
-      <nav id="nav-menu" aria-labelledby="label_mainnav" data-uha-interface="menu">
+      <nav 
+        id="nav-menu" 
+        aria-labelledby="label_mainnav" 
+        data-uha-interface="menu" 
+        class="menu-wrapper menu-wrapper--hidden"
+      >
         <span id="label_mainnav" class="aria-labelledby" aria-hidden="true">
           <?php _e( 'Main menu', 'urbanheat' ); ?>
         </span>
