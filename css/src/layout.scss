@@ -11,3 +11,99 @@
   padding-right: scale.$small;
   box-sizing: border-box;
 }
+
+// Link chain
+.link-chain {
+  padding: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+.link-chain__link-item {
+  margin-right: scale.px(scale.$small);
+  margin-right: scale.$small;
+  margin-left: 0;
+  float: left;
+}
+.link-chain--flush-right {
+  float: right;
+  justify-content: flex-end;
+}
+.link-chain--flush-right__link-item {
+  margin-right: 0;
+  margin-left: scale.px(scale.$small);
+  margin-left: scale.$small;
+}
+
+// for divs which contain two children flush left and right
+.wall-hugger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wall-hugger__left {
+  float: left;
+}
+.wall-hugger__right {
+  float: right;
+}
+
+// Module representing a single-line padded bar
+.content-bar {
+  height: scale.$large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+// One side has square image, other side has text
+.windsock {
+  display: flex;
+}
+.windsock__left {
+  margin-right: scale.px(scale.$medium) * 0.5;
+  margin-right: scale.$medium * 0.5;
+}
+.windsock__right {
+  margin-left: scale.px(scale.$medium) * 0.5;
+  margin-left: scale.$medium * 0.5;
+}
+.windsock__image {
+  width: scale.px(scale.$large);
+  width: scale.$large;
+  height: 100%;
+}
+.windsock__image__img {
+  width: 100%;
+}
+.windsock__content {
+
+}
+
+// Horizontal flex row
+.flex-row {
+  display: flex;
+  @media (max-width: scale.$break-s) {
+    flex-direction: column;
+  }
+}
+.flex-row__bead {
+  margin-right: scale.px(scale.$small);
+  margin-right: scale.$small;
+  float: left;
+  @media (max-width: scale.$break-s) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: scale.px(scale.$small);
+    margin-bottom: scale.$small;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}
+.flex-row--stretched__bead {
+  margin-right: scale.px(scale.$large);
+  margin-right: scale.$large;
+}

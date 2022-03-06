@@ -60,43 +60,6 @@
   width: 100%;
 }
 
-// Link chain
-.link-chain {
-  padding: 0;
-  margin: 0;
-  float: left;
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-}
-.link-chain__link-item {
-  margin-right: scale.px(scale.$small);
-  margin-right: scale.$small;
-  margin-left: 0;
-  float: left;
-}
-.link-chain--flush-right {
-  float: right;
-  justify-content: flex-end;
-}
-.link-chain--flush-right__link-item {
-  margin-right: 0;
-  margin-left: scale.px(scale.$small);
-  margin-left: scale.$small;
-}
-
-// for divs which contain two children flush left and right
-.wall-hugger {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.wall-hugger__left {
-  float: left;
-}
-.wall-hugger__right {
-  float: right;
-}
 
 // Skip link styling
 .skip-link {
@@ -110,7 +73,6 @@
     width: 100%;
     padding: scale.px(scale.$medium) 0;
     padding: scale.$medium 0;
-    background: rgba(255, 255, 255, 0.75);
     box-shadow: 0 8px 25px 0 colors.dusk(0.5);
     text-align: center;
     border: none;
@@ -137,7 +99,6 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   line-height: scale.px($button-dim);
   line-height: $button-dim;
   text-decoration: none;
-  
   border-radius: scale.px(scale.$small);
   border-radius: scale.$small;
   border: none;
@@ -205,13 +166,6 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   }
 }
 
-// Module representing a single-line padded bar
-.content-bar {
-  height: scale.$large;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 // Header styling
 .header a {
@@ -248,16 +202,22 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   }
   .menu--primary--open {
     display: block;
-    background: red;
+    background: colors.$dusk;
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
-    right: 25%;
+    right: scale.$large + scale.$medium;
+    max-width: 70%;
     bottom: 0;
     z-index: layouting.$z-layer--menu;
   }
   .menu--primary__link-item {
     float: none;
+    border: 1px solid green;
+  }
+  .menu--primary__link-item a {
+    @include text-styles.link-inverted;
   }
 }
 
@@ -293,16 +253,9 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 
 }
 
+
 .inverted a { //sorry for cascade
-  color: white;
-  border-bottom-width: 0;
-  transition: color 0.25s, border-bottom-width 0.05s;
-  &:hover, &:focus {
-    color: colors.$grapefruit;
-    border-bottom: scale.px(scale.$teeny) solid colors.$grapefruit;
-    border-bottom: scale.$teeny solid colors.$grapefruit;
-    background: none;
-  }
+  @include text-styles.link-inverted;
 }
 
 .footer {
@@ -345,29 +298,6 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   @include auto-icon("\f16d");
 }
 
-.windsock {
-  display: flex;
-}
-.windsock__left {
-  margin-right: scale.px(scale.$medium) * 0.5;
-  margin-right: scale.$medium * 0.5;
-}
-.windsock__right {
-  margin-left: scale.px(scale.$medium) * 0.5;
-  margin-left: scale.$medium * 0.5;
-}
-.windsock__image {
-  width: scale.px(scale.$large);
-  width: scale.$large;
-  height: 100%;
-}
-.windsock__image__img {
-  width: 100%;
-}
-.windsock__content {
-
-}
-
 .logo-link {
   border: none;
   background: none;
@@ -377,29 +307,4 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     background: none;
     opacity: 0.75;
   }
-}
-
-.flex-row {
-  display: flex;
-  @media (max-width: scale.$break-s) {
-    flex-direction: column;
-  }
-}
-.flex-row__bead {
-  margin-right: scale.px(scale.$small);
-  margin-right: scale.$small;
-  float: left;
-  @media (max-width: scale.$break-s) {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: scale.px(scale.$small);
-    margin-bottom: scale.$small;
-    &:nth-last-child(1) {
-      margin-bottom: 0;
-    }
-  }
-}
-.flex-row--stretched__bead {
-  margin-right: scale.px(scale.$medium);
-  margin-right: scale.$medium;
 }
