@@ -102,7 +102,11 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   border-radius: scale.px(scale.$small);
   border-radius: scale.$small;
   border: none;
-  transition: 0.25s box-shadow, 0.25s background, 0.25s color;
+  transition: 
+    0.25s box-shadow, 
+    0.25s background, 
+    0.25s color,
+    0.2s outline-offset;
   box-shadow: 0 8px 12px 0 colors.dusk(0.1);
   &:hover, &:focus {
     border: none;
@@ -305,7 +309,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 .logo-link {
   border: none;
   background: none;
-  transition: 0.25s opacity;
+  transition: 0.25s opacity, 0.2s outline-offset;
   &:hover, &:focus {
     border: none;
     background: none;

@@ -24,12 +24,12 @@
   text-decoration: none;
   border-bottom: scale.px(scale.$thin) solid colors.$grapefruit;
   border-bottom: scale.$thin solid colors.$grapefruit;
-  transition: 0.25s background, 0.05s border-bottom;
+  transition: 0.25s background, 0.05s border-bottom, 0.2s outline-offset;
 }
 @mixin link-underline {
   @include paragraph;
   text-decoration-thickness: 0;
-  transition: 0.25s background, 0.05s text-decoration-thickness;
+  transition: 0.25s background, 0.05s text-decoration-thickness, 0.2s outline-offset;;
   &:hover, &:focus {
     text-decoration: underline;
     border: none;
@@ -43,7 +43,7 @@
   @include link;
   color: white;
   border-bottom-width: 0;
-  transition: 0.25s color, 0.05s border-bottom;
+  transition: 0.25s color, 0.05s border-bottom, 0.2s outline-offset;;
   &:hover, &:focus {
     color: colors.$grapefruit;
     background: none;
@@ -54,7 +54,7 @@
 @mixin link-inverted-underline {
   @include link-underline;
   color: white;
-  transition: 0.25s color, 0.05s text-decoration-thickness;
+  transition: 0.25s color, 0.05s text-decoration-thickness, 0.2s outline-offset;;
   &:hover, &:focus {
     color: colors.$grapefruit;
     background: none;
