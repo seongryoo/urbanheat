@@ -52,10 +52,19 @@
 
 // Module representing a single-line padded bar
 .content-bar {
-  height: scale.$large;
+  padding-top: scale.px(scale.$medium);
+  padding-top: scale.$medium;
+  padding-bottom: scale.px(scale.$medium);
+  padding-bottom: scale.$medium;
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media (max-width: scale.$break-s) {   
+    padding-top: scale.px(scale.$small);
+    padding-top: scale.$small;
+    padding-bottom: scale.px(scale.$small);
+    padding-bottom: scale.$small;
+  }
 }
 
 // One side has square image, other side has text
