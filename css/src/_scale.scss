@@ -1,37 +1,66 @@
-// Typescale values (base 15.1px, ratio 1.2)
-
-// db: desktop-body
-// dh: desktop-heading
-// mb: mobile-body
-// mh: mobile-heading
 @use 'sass:math';
-
-$font-size-db: 1.1325rem;
-$font-size-dh: 2.818rem;
-$font-size-mb: 1.1325rem;
-$font-size-mh: 2.348375rem;
-$font-size-db-b: 1.359rem;
-
-$line-height-db: 1.728;
-$line-height-dh: 1.2;
-$line-height-mb: 1.728;
-$line-height-mh: 1.2;
-
-$line-height-rem: $font-size-db * $line-height-db;
-$six-lines: 6 * $line-height-rem;
-
-$large: 5.8434048rem;
-$medium: 2.348375rem;
-$small: 1.1325rem;
-
-$teeny: 1.2 * 0.3160625rem;
-$thin: 0.18291rem;
 
 @function px($value) {
   @return math.div($value, 1rem) * 16px;
 }
 
-$break-xs: math.div(360rem, 16);
-$break-s: math.div(720rem, 16);
-$break-m: math.div(900rem, 16);
-$break-l: math.div(1440rem, 16);
+@function rem($value) {
+  @return math.div($value, 16px) * 1rem;
+}
+
+// Typescale values (base 15.1px, ratio 1.2)
+$p0: 15.1px;
+$p1: 18.12px;
+$p2: 21.744px;
+$p3: 26.093px;
+$p4: 37.574px;
+$p5: 45.088px;
+$p6: 54.106px;
+$p7: 64.927px;
+$p8: 77.913px;
+$p9: 93.495px;
+$p10: 112.194px;
+$p11: 134.633px;
+$p12: 161.56px;
+$p13: 193.872px;
+$p14: 232.646px;
+$p15: 279.175px;
+$p-1: 12.583px;
+$p-2: 10.486px;
+$p-5: 6.068px;
+$p-9: 2.927px;
+
+// Padding sizes
+$large: rem($p9);
+$medium: rem($p4);
+$small: rem($p1);
+$teeny: rem($p-5);
+$thin: rem($p-9);
+
+// Text
+// db: desktop-body
+// dh: desktop-heading
+// mb: mobile-body
+// mh: mobile-heading
+
+// Font sizes
+$font-size-db: rem($p1);
+$font-size-dh: rem($p5);
+$font-size-mb: rem($p1);
+$font-size-mh: rem($p4);
+$font-size-db-b: rem($p2);
+
+// Line heights
+$line-height-db: 1.728;
+$line-height-dh: 1.2;
+$line-height-mb: 1.728;
+$line-height-mh: 1.2;
+
+$line-height-db-rem: $font-size-db * $line-height-db;
+$six-lines: 6 * $line-height-db-rem;
+
+
+$break-xs: rem(360px);
+$break-s: rem(720px); // hamburger icon appears
+$break-m: rem(900px); // hero banners pre-emptively stack vertically
+$break-l: rem(1440px);
