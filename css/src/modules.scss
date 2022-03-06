@@ -306,12 +306,16 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
 }
 
 .footer {
+  margin-top: auto;
+  display: block;
+}
+.footer__footer-content {
   background: colors.$dusk;
   padding: scale.px(scale.$medium) 0;
   padding: scale.$medium 0;
-  margin-top: scale.px(scale.$medium);
-  margin-top: scale.$medium;
-  display: block;
+  margin-top: scale.px(scale.$small);
+  margin-top: scale.$small;
+  width: 100%;
 }
 .menu--footer__link-item,
 .menu--socials__link-item {
