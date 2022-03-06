@@ -195,7 +195,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   margin-bottom: scale.$small;
 }
 
-// Main menu styling
+// Main menu styling when in hamburger mode
 @media (max-width: scale.$break-s) {
   .menu--primary {
     display: none;
@@ -217,7 +217,9 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     border: 1px solid green;
   }
   .menu--primary__link-item a {
-    @include text-styles.link-inverted;
+    padding: scale.$small 0;
+    display: block;
+    @include text-styles.link-inverted-underline;
   }
 }
 
@@ -227,11 +229,13 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   padding: 0;
   background: none;
   @include text-styles.paragraph;
+  height: scale.px(scale.$line-height-db-rem);
+  height: scale.$line-height-db-rem;
   &:hover {
     cursor: pointer;
   }
   @media (max-width: scale.$break-s) {
-    display: flex block;
+    display: flex;
     align-items: center;
   }
 }
