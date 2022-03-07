@@ -3,6 +3,10 @@ function menuHook() {
   var menuWrapper = document.querySelector("[data-uha-interface='menu']");
   var menuFog = document.querySelector("[data-uha-interface='fog']");
   var menu = menuWrapper.querySelector("ul");
+  var firstChild = burger;
+  var lastChild = menu.children[menu.children.length - 1];
+  var lastLink = lastChild.querySelector("a");
+  console.log(lastChild);
   var menuOpen = false;
   function updateMenu() {
     if (menuOpen) {
@@ -37,8 +41,28 @@ function menuHook() {
       closeMenu();
     }
   }
+  function isBurgerHidden() {
+    return window.getComputedStyle(burger).display === "none";
+  }
+  function checkTabs(event) {
+    if (!menuOpen || event.isComposing || isBurgerHidden()) {
+      return;
+    }
+    if (event.key === "Tab" || event.keyCode === 9) {
+      if (event.shiftKey) {
+        if (event.target === firstChild) {
+          event.preventDefault();
+          lastLink.focus();
+        }
+      } else if (event.target === lastLink) {
+        event.preventDefault();
+        firstChild.focus();
+      }
+    }
+  }
   burger.addEventListener("click", pressBurger);
   menuFog.addEventListener("click", closeMenu);
+  document.addEventListener("keydown", checkTabs);
   updateMenu();
 }
 window.addEventListener("load", menuHook);
