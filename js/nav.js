@@ -6,7 +6,6 @@ function menuHook() {
   var firstChild = burger;
   var lastChild = menu.children[menu.children.length - 1];
   var lastLink = lastChild.querySelector("a");
-  console.log(lastChild);
   var menuOpen = false;
   function updateMenu() {
     if (menuOpen) {
