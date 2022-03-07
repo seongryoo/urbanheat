@@ -11,12 +11,14 @@ function menuHook() {
       menuFog.classList.remove("menu-fog--cleared");
       burger.setAttribute("aria-expanded", "true");
       burger.classList.add("hamburger--fixed");
+      document.addEventListener("keydown", escapeMenu);
     } else {
       menu.classList.remove("menu--primary--open");
       menuWrapper.classList.add("menu-wrapper--hidden");
       menuFog.classList.add("menu-fog--cleared");
       burger.setAttribute("aria-expanded", "false");
       burger.classList.remove("hamburger--fixed");
+      document.removeEventListener("keydown", escapeMenu);
     }
   }
   function pressBurger(event) {
@@ -26,6 +28,14 @@ function menuHook() {
   function closeMenu(event) {
     menuOpen = false;
     updateMenu();
+  }
+  function escapeMenu(event) {
+    if (!menuOpen || event.isComposing) {
+      return;
+    }
+    if (event.key === "Escape" || event.keyCode === 27) {
+      closeMenu();
+    }
   }
   burger.addEventListener("click", pressBurger);
   menuFog.addEventListener("click", closeMenu);
