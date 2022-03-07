@@ -43,7 +43,7 @@
   @include link;
   color: white;
   border-bottom-width: 0;
-  transition: 0.25s color, 0.05s border-bottom, 0.2s outline-offset;;
+  transition: 0.25s color, 0.05s border-bottom, 0.2s outline-offset;
   &:hover, &:focus {
     color: colors.$grapefruit;
     background: none;

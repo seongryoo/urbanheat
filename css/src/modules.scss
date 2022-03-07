@@ -188,7 +188,11 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   }
 }
 
-.site-title {
+
+.inverted a { //sorry for cascade
+  @include text-styles.link-inverted;
+}
+a.site-title {
   font-weight: 800;
   font-size: scale.px(scale.$font-size-db-b);
   font-size: scale.$font-size-db-b;
@@ -199,6 +203,12 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   margin-bottom: scale.$small;
 }
 
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 // Main menu styling when in hamburger mode
 @media (max-width: scale.$break-s) {
   .menu-wrapper--hidden {
@@ -218,7 +228,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   }
   .menu--primary__link-item {
     float: none;
-    border: 1px solid green;
+    // border: 1px solid green;
   }
   .menu--primary__link-item a {
     padding: scale.$small 0;
@@ -231,7 +241,9 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   display: none;
   border: none;
   padding: 0;
-  background: none;
+  background: white;
+  position: relative;
+  z-index: layouting.$z-layer--menu;
   @include text-styles.paragraph;
   height: scale.px(scale.$line-height-db-rem);
   height: scale.$line-height-db-rem;
@@ -243,6 +255,13 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     align-items: center;
   }
 }
+.hamburger--fixed {
+  position: fixed;
+  top: scale.px(scale.$small);
+  top: scale.$small;
+  right: scale.px(scale.$small);
+  right: scale.$small;
+}
 .hamburger__icon {
   margin-right: scale.px(scale.$teeny);
   margin-right: scale.$teeny;
@@ -251,19 +270,30 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
   fill: colors.$dusk;
 }
 
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.menu-fog {
+  display: none;
 }
+@media (max-width: scale.$break-s) {
+  .menu-fog {
+    display: block;
+    pointer-events: all;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: layouting.$z-layer--menu-fog;
+    transition: 0.25s opacity;
+  }
+  .menu-fog--cleared {
+    opacity: 0;
+    pointer-events: none;
+    z-index: layouting.$z-layer--base;
+    transition: 0.5s opacity;
+  }
 
-.menu-link a {
-
-}
-
-
-.inverted a { //sorry for cascade
-  @include text-styles.link-inverted;
 }
 
 .footer {

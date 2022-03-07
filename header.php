@@ -71,6 +71,8 @@
           ) );
         ?>
       </nav>
+
+      <div class="menu-fog menu-fog--cleared" data-uha-interface="fog">
     </div>
   </div>
 </header>
