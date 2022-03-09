@@ -56,9 +56,9 @@ $line-height-dh: 1.2;
 $line-height-mb: 1.728;
 $line-height-mh: 1.2;
 
-$line-height-db-rem: $font-size-db * $line-height-db;
-$six-lines: 6 * $line-height-db-rem;
-
+@function lines($num-lines) {
+  @return $line-height-db * $font-size-db * $num-lines;
+}
 
 $break-xs: rem(360px);
 $break-s: rem(720px); // hamburger icon appears

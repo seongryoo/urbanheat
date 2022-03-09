@@ -2,6 +2,7 @@
 @use 'layouting';
 @use 'scale';
 @use 'text-styles';
+@use 'layout';
 
 body, h1, h2, h3, h4, h6, p {
   margin: 0;
@@ -34,12 +35,14 @@ a:hover, a:focus {
   border-bottom: scale.$teeny solid colors.$dusk;
   color: black;
 }
-p {
-  // @include text-styles.paragraph-alt;
-  max-width: layouting.$canvas-d * 0.70;
-  max-width: layouting.$canvas-d * 0.70;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: scale.px(scale.$medium);
-  margin-bottom: scale.$medium;
+iframe {
+  width: 100%;
+}
+.contained > p,
+.contained > ul,
+.contained > img,
+.contained > figure,
+.contained > table,
+.contained > blockquote {
+  @include layout.flow-block;
 }

@@ -7,6 +7,7 @@ class UrbanHeatATL_Theme {
     'utils',
     'layout',
     'modules',
+    'wordpress-overrides',
   );
   const SCRIPTS = array(
     'nav',

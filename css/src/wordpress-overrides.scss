@@ -1,0 +1,17 @@
+@use 'colors';
+@use 'base';
+@use 'layout';
+@use 'scale';
+
+.contained > .wp-block-image {
+  @include layout.flow-block;
+}
+.contained .wp-block-embed.is-type-video,
+.contained .wp-block-embed.is-type-video iframe {
+  min-height: scale.px(scale.lines(16));
+  min-height: scale.lines(16);
+  @media (max-width: scale.$break-m) {
+    min-height: scale.px(scale.lines(12));
+    min-height: scale.lines(12);
+  }
+}

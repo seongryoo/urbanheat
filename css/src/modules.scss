@@ -245,8 +245,8 @@ a.site-title {
   position: relative;
   z-index: layouting.$z-layer--menu;
   @include text-styles.paragraph;
-  height: scale.px(scale.$line-height-db-rem);
-  height: scale.$line-height-db-rem;
+  height: scale.px(scale.lines(1));
+  height: scale.lines(1);
   &:hover {
     cursor: pointer;
   }
