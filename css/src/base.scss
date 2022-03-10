@@ -2,7 +2,7 @@
 @use 'layouting';
 @use 'scale';
 @use 'text-styles';
-@use 'layout';
+@use 'mixins';
 
 body, h1, h2, h3, h4, h6, p {
   margin: 0;
@@ -38,11 +38,17 @@ a:hover, a:focus {
 iframe {
   width: 100%;
 }
+.aria-labelledby {
+  display: none;
+}
+.visually-hidden {
+  @include mixins.visually-hidden();
+}
 .contained > p,
 .contained > ul,
 .contained > img,
 .contained > figure,
 .contained > table,
 .contained > blockquote {
-  @include layout.flow-block;
+  @include mixins.flow-block;
 }

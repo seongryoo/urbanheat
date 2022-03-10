@@ -64,4 +64,4 @@ function menuHook() {
   document.addEventListener("keydown", checkTabs);
   updateMenu();
 }
-window.addEventListener("load", menuHook);
+window.addEventListener("DOMContentLoaded", menuHook);

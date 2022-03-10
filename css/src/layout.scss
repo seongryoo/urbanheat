@@ -114,14 +114,3 @@
   margin-right: scale.px(scale.$large);
   margin-right: scale.$large;
 }
-
-@mixin flow-block {
-  max-width: layouting.$canvas-d * 0.70;
-  max-width: layouting.$canvas-d * 0.70;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: scale.px(scale.$small);
-  margin-bottom: scale.$small;
-  margin-top: scale.px(scale.$small);
-  margin-top: scale.$small;
-}

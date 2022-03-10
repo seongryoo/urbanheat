@@ -1,8 +1,8 @@
 @use 'scale';
 @use 'text-styles';
-@use 'utils';
 @use 'colors';
 @use 'layouting';
+@use 'mixins';
 
 // Hero
 .hero {
@@ -63,9 +63,9 @@
 
 // Skip link styling
 .skip-link {
-  @include utils.visually-hidden();
+  @include mixins.visually-hidden();
   &:focus {
-    @include utils.visible();
+    @include mixins.visible();
     position: absolute;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@
     z-index: layouting.$z-layer--skip;
   }
   &:not(:focus) {
-    @include utils.visually-hidden();
+    @include mixins.visually-hidden();
   }
 }
 

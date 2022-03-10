@@ -1,10 +1,9 @@
 @use 'colors';
-@use 'base';
-@use 'layout';
+@use 'mixins';
 @use 'scale';
 
 .contained > .wp-block-image {
-  @include layout.flow-block;
+  @include mixins.flow-block;
 }
 .contained .wp-block-embed.is-type-video,
 .contained .wp-block-embed.is-type-video iframe {
