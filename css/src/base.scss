@@ -46,9 +46,13 @@ iframe {
 }
 .contained > p,
 .contained > ul,
-.contained > img,
-.contained > figure,
 .contained > table,
 .contained > blockquote {
   @include mixins.flow-block;
+  @include mixins.flow-block--standard;
+}
+.contained > img,
+.contained > figure {
+  @include mixins.flow-block;
+  @include mixins.flow-block--spaced;
 }

@@ -4,6 +4,7 @@
 
 .contained > .wp-block-image {
   @include mixins.flow-block;
+  @include mixins.flow-block--spaced;
 }
 .contained .wp-block-embed.is-type-video,
 .contained .wp-block-embed.is-type-video iframe {
