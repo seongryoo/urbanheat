@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:sass": "sass css/src:css/build",
-    "prefix": "postcss --use=autoprefixer --replace css/build/*.css",
+    "build:sass": "sass scss:css",
+    "prefix": "postcss --use=autoprefixer --replace css/*.css",
     "build:both": "npm run build:sass && npm run prefix",
-    "start": "onchange \"css/src/**/*.scss\" -- npm run build:both"
+    "start": "onchange \"scss/**/*.scss\" -- npm run build:both"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wordpress/scripts": "22.2.1",
     "autoprefixer": "^10.4.2",
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",

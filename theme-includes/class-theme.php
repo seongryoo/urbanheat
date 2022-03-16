@@ -28,7 +28,7 @@ class UrbanHeatATL_Theme {
     } );
     // Stylesheets and JS files for front end (client view)
     add_action( 'wp_enqueue_scripts', function() {
-      $style_url = get_template_directory_uri() . '/css/build/';
+      $style_url = get_template_directory_uri() . '/css/';
       $styles = constant( __CLASS__ . "::STYLES" );
       foreach ( $styles as $style ) {
         wp_enqueue_style(

@@ -1,11 +1,13 @@
-import { Swap, Upload } from './_icons';
+const el = wp.element.createElement;
+const Swap = el("svg", { xmlns: "http://www.w3.org/2000/svg", "enable-background": "new 0 0 24 24", height: "24px", viewBox: "0 0 24 24", width: "24px", fill: "#000000" }, el("g", null, el("rect", { fill: "none", height: "24", width: "24", x: "0" })), el("g", null, el("g", null, el("polygon", { points: "18,12 22,8 18,4 18,7 3,7 3,9 18,9" }), el("polygon", { points: "6,12 2,16 6,20 6,17 21,17 21,15 6,15" }))));
+const Upload = el("svg", { xmlns: "http://www.w3.org/2000/svg", "enable-background": "new 0 0 24 24", height: "24px", viewBox: "0 0 24 24", width: "24px", fill: "#000000" }, el("g", null, el("rect", { fill: "none", height: "24", width: "24" })), el("g", null, el("path", { d: "M5,20h14v-2H5V20z M5,10h4v6h6v-6h4l-7-7L5,10z" })));
+
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { TextareaControl, Button, Icon, TextControl, CheckboxControl } = wp.components;
 const { createElement } = wp.element;
 const { MediaUpload, MediaUploadCheck, RichText } = wp.blockEditor;
 
-const el = createElement;
 registerBlockType( 'urbanheat/hero-block', {
     edit: (props) => {
       const sideImageUploadButton = el(

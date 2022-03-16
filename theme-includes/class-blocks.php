@@ -11,8 +11,7 @@ class UrbanHeatATL_Blocks {
     'fonts'
   );
   const SCRIPTS = array(
-    '_icons',
-    'hero',
+    'blocks',
   );
   const DEPENDENCIES = array(
     'wp-blocks',
@@ -30,13 +29,13 @@ class UrbanHeatATL_Blocks {
       foreach ( $styles as $style ) {
         wp_enqueue_style(
           'urbanheat-' . $style, 
-          $style_url . $style 
+          $style_url . $style . '.css' 
         );
       }
       foreach ( $scripts as $script ) {
         wp_enqueue_script(
           'urbanheat-' . $script,
-          $script_url . $script,
+          $script_url . $script . '.js',
           $dependencies
         );
       }
@@ -51,16 +50,7 @@ class UrbanHeatATL_Blocks {
     } );
   }
   function filters__editor() {
-    // Add type="module" to scripts
-    add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
-      $scripts = constant( __CLASS__ . "::SCRIPTS" );
-      foreach ( $scripts as $script ) {
-        if ( $handle == 'urbanheat-' . $script ) {
-          return '<script type="module" src="' . esc_url( $src ) . '"></script>';
-        }
-      }    
-      return $tag;
-    }, 10, 3 );
+    
   }
   function __construct() {
     $this->actions__editor();
