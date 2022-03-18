@@ -4,20 +4,22 @@
 @use 'layouting';
 @use 'mixins';
 
+// IDEEA: make in-page hero blocks have different font qualities AND a gradient temperature bakcground
+
 // Hero
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  @include mixins.flow-block--spaced;
   @media (max-width: scale.$break-m) {
     display: block;
   }
 }
 .hero__content {
   max-width: 50%;
-  margin: scale.px(scale.$large) 0;
-  margin: scale.$large 0;
+  width: 50%;
   box-sizing: border-box;
 }
 .hero__content--left {
@@ -42,11 +44,20 @@
     padding: 0;
   }
 }
-.hero__content__text {
-  
+.hero__content__text,
+.hero__content__image,
+.hero__content__video {
+  margin: scale.px(scale.$large) 0;
+  margin: scale.$large 0;
 }
-.hero__content__text__header {
-  @include text-styles.main-header;
+@media (max-width: scale.$break-m) {
+  .hero__content__image,
+  .hero__content__video {
+    margin: 0;
+  }
+}
+.hero__content__text__heading {
+  @include text-styles.page-heading;
 }
 .hero__content__text__caption {
   margin: scale.px(scale.$small) 0;
@@ -58,6 +69,10 @@
 }
 .hero__content__image {
   width: 100%;
+}
+
+.mini-hero__content__text__header {
+  @include text-styles.section-heading;
 }
 
 

@@ -67,7 +67,7 @@
   font-size: scale.$font-size-db-b;
   line-height: scale.$line-height-db;
 }
-@mixin main-header {
+@mixin page-heading {
   @include base-text;
   font-family: 'OpenSans', Verdana, sans-serif;
   font-size: scale.px(scale.$font-size-dh);
@@ -79,4 +79,11 @@
     font-size: scale.$font-size-mh;
     line-height: scale.$line-height-mh;
   }
+}
+@mixin section-heading {
+  @include base-text;
+  font-family: 'OpenSans', Verdana, sans-serif;
+  font-size: scale.px(scale.$font-size-mh);
+  font-size: scale.$font-size-mh;
+  line-height: scale.$line-height-mh;
 }
