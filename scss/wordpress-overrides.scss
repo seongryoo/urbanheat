@@ -7,17 +7,19 @@
   @include mixins.flow-block--spaced;
 }
 .contained > .wp-block-embed.is-type-video,
+.contained > .wp-block-embed.is-type-video .wp-block-embed__wrapper,
 .contained > .wp-block-embed.is-type-video iframe {
-  min-height: scale.px(scale.lines(16));
-  min-height: scale.lines(16);
+  height: scale.px(scale.lines(16));
+  height: scale.lines(16);
   @media (max-width: scale.$break-m) {
-    min-height: scale.px(scale.lines(12));
-    min-height: scale.lines(12);
+    height: scale.px(scale.lines(12));
+    height: scale.lines(12);
   }
 }
 
 .hero .wp-block-embed.is-type-video,
+.hero .wp-block-embed.is-type-video .wp-block-embed__wrapper,
 .hero .wp-block-embed.is-type-video iframe {
-  min-height: scale.px(scale.lines(12));
-  min-height: scale.lines(12);
+  height: scale.px(scale.lines(12));
+  height: scale.lines(12);
 }

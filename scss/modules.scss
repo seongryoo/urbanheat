@@ -6,13 +6,17 @@
 
 // IDEEA: make in-page hero blocks have different font qualities AND a gradient temperature bakcground
 
+.heading--post-title {
+  margin-top: scale.px(scale.$large);
+  margin-top: scale.$large;
+}
+
 // Hero
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  @include mixins.flow-block--spaced;
   @media (max-width: scale.$break-m) {
     display: block;
   }
@@ -47,8 +51,18 @@
 .hero__content__text,
 .hero__content__image,
 .hero__content__video {
-  margin: scale.px(scale.$large) 0;
-  margin: scale.$large 0;
+  margin: scale.px(scale.$medium) 0;
+  margin: scale.$medium 0;
+}
+.hero {
+  &:nth-child(1) {
+    .hero__content__text,
+    .hero__content__image,
+    .hero__content__video {
+      margin: scale.px(scale.$large) 0;
+      margin: scale.$large 0;
+    }
+  }
 }
 @media (max-width: scale.$break-m) {
   .hero__content__image,
@@ -122,7 +136,7 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     0.25s background, 
     0.25s color,
     0.2s outline-offset;
-  box-shadow: 0 8px 12px 0 colors.dusk(0.1);
+  box-shadow: 0 8px 12px 0 colors.dusk(0.075);
   &:hover, &:focus {
     border: none;
     background: colors.grapefruit(0.75);
@@ -171,12 +185,12 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     border-radius: scale.px(scale.$small) * 1.44;
     border-radius: scale.$small * 1.44;
     z-index: -2;
-    box-shadow: 0 8px 16px 0 colors.dusk(0.2);
+    box-shadow: 0 8px 16px 0 colors.dusk(0.125);
     transition: 0.25s box-shadow;
     // border-bottom: 2px solid colors.$dusk;
   }
   &:hover:after, &focus:after {
-    box-shadow: 0 2px 4px 0 colors.dusk(0.3);
+    box-shadow: 0 2px 4px 0 colors.dusk(0.25);
   }
   &:hover, &:focus {
     border: none;

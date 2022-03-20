@@ -16,6 +16,9 @@ body {
 h1 {
   @include text-styles.page-heading;
 }
+h2 {
+  @include text-styles.section-heading;
+}
 // Focus styling based on WAI
 [tabindex]:not([tabindex="-1"]), a, button, input, select {
   outline: 3px solid rgba(255, 0, 0, 0);
@@ -47,7 +50,9 @@ iframe {
 .contained > p,
 .contained > ul,
 .contained > table,
-.contained > blockquote {
+.contained > blockquote,
+.contained > h1,
+.contained > h2 {
   @include mixins.flow-block;
   @include mixins.flow-block--standard;
 }
@@ -55,4 +60,10 @@ iframe {
 .contained > figure {
   @include mixins.flow-block;
   @include mixins.flow-block--spaced;
+}
+figure {
+  @include mixins.rounded;
+}
+figure.is-type-video {
+  @include mixins.shadowed;
 }
