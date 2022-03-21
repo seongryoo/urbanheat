@@ -9,7 +9,7 @@
           <?php _e( 'Urban Heat ATL home', 'urbanheat' ); ?>
         </h1>
 
-        <div class="contained">
+        <div class="the-content">
           <?php the_content(); ?>
         </div>
       <?php

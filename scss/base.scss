@@ -47,19 +47,24 @@ iframe {
 .visually-hidden {
   @include mixins.visually-hidden();
 }
-.contained > p,
-.contained > ul,
-.contained > table,
-.contained > blockquote,
-.contained > h1,
-.contained > h2 {
-  @include mixins.flow-block;
-  @include mixins.flow-block--standard;
-}
-.contained > img,
-.contained > figure {
-  @include mixins.flow-block;
-  @include mixins.flow-block--spaced;
+.the-content {
+  > p, 
+  > ul, 
+  > blockquote, 
+  > h1, 
+  > h2 {
+    @include mixins.contained-edge-padding;
+    @include mixins.contained-centered;
+    @include mixins.reader-column-max-width;
+    @include mixins.the-content-v-margin;
+  }
+  > img,
+  > figure {
+    @include mixins.contained-edge-padding;
+    @include mixins.contained-centered;
+    @include mixins.reader-column-max-width;
+    @include mixins.the-content-v-margin-large;
+  }
 }
 figure {
   @include mixins.rounded;

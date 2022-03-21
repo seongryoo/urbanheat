@@ -2,13 +2,9 @@
 @use 'mixins';
 @use 'scale';
 
-.contained > .wp-block-image {
-  @include mixins.flow-block;
-  @include mixins.flow-block--spaced;
-}
-.contained > .wp-block-embed.is-type-video,
-.contained > .wp-block-embed.is-type-video .wp-block-embed__wrapper,
-.contained > .wp-block-embed.is-type-video iframe {
+.the-content > .wp-block-embed.is-type-video,
+.the-content > .wp-block-embed.is-type-video .wp-block-embed__wrapper,
+.the-content > .wp-block-embed.is-type-video iframe {
   height: scale.px(scale.lines(16));
   height: scale.lines(16);
   @media (max-width: scale.$break-m) {

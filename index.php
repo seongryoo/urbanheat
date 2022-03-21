@@ -9,7 +9,7 @@
           <?php the_title(); ?>
         </h1>
 
-        <div class="contained">
+        <div class="the-content">
           <?php the_content(); ?>
         </div>
       <?php

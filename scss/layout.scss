@@ -1,15 +1,11 @@
 @use 'scale';
+@use 'mixins';
 @use 'layouting';
 
 .contained {
-  max-width: layouting.$canvas-d;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: scale.px(scale.$small);
-  padding-left: scale.$small;
-  padding-right: scale.px(scale.$small);
-  padding-right: scale.$small;
-  box-sizing: border-box;
+  @include mixins.contained-max-width;
+  @include mixins.contained-edge-padding;
+  @include mixins.contained-centered;
 }
 
 // Link chain

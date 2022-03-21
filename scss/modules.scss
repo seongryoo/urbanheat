@@ -12,7 +12,7 @@
 }
 
 // Hero
-.hero {
+.hero__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,12 +21,12 @@
     display: block;
   }
 }
-.hero__content {
+.hero__container__content {
   max-width: 50%;
   width: 50%;
   box-sizing: border-box;
 }
-.hero__content--left {
+.hero__container__content--left {
   padding-right: scale.px(scale.$medium) * 0.5;
   padding-right: scale.$medium * 0.5;
   float: left;
@@ -37,7 +37,7 @@
     padding: 0;
   }
 }
-.hero__content--right {
+.hero__container__content--right {
   padding-left: scale.px(scale.$medium) * 0.5;
   padding-left: scale.$medium * 0.5;
   float: right;
@@ -48,44 +48,44 @@
     padding: 0;
   }
 }
-.hero__content__text,
-.hero__content__image,
-.hero__content__video {
+.hero__container__content__text,
+.hero__container__content__image,
+.hero__container__content__video {
   margin: scale.px(scale.$medium) 0;
   margin: scale.$medium 0;
 }
 .hero {
   &:nth-child(1) {
-    .hero__content__text,
-    .hero__content__image,
-    .hero__content__video {
+    .hero__container__content__text,
+    .hero__container__content__image,
+    .hero__container__content__video {
       margin: scale.px(scale.$large) 0;
       margin: scale.$large 0;
     }
   }
 }
 @media (max-width: scale.$break-m) {
-  .hero__content__image,
-  .hero__content__video {
+  .hero__container__content__image,
+  .hero__container__content__video {
     margin: 0;
   }
 }
-.hero__content__text__heading {
+.hero__container__content__text__heading {
   @include text-styles.page-heading;
 }
-.hero__content__text__caption {
+.hero__container__content__text__caption {
   margin: scale.px(scale.$small) 0;
   margin: scale.$small 0;
 }
-.hero__content__text__button--no-caption {
+.hero__container__content__text__button--no-caption {
   margin-top: scale.px(scale.$medium);
   margin-top: scale.$medium;
 }
-.hero__content__image {
+.hero__container__content__image {
   width: 100%;
 }
 
-.mini-hero__content__text__header {
+.mini-hero__container__content__text__header {
   @include text-styles.section-heading;
 }
 
