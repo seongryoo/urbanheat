@@ -12,9 +12,6 @@
 }
 
 // Hero
-.hero {
-  background: #eaeaea;
-}
 .hero__container {
   display: flex;
   align-items: center;
@@ -32,9 +29,15 @@
   padding: scale.$medium 0;
 }
 .hero {
+  // Mid-page hero banners
   @include mixins.the-content-v-margin-large;
+  background: colors.heatwave-gradient(0.2, 215deg);
+
+  // Page vanguard hero banners
   &:nth-child(1) {
+    background: none;
     margin-top: 0;
+    margin-bottom: 0;
     .hero__container__content {
       padding: scale.px(scale.$large) 0;
       padding: scale.$large 0;
@@ -193,7 +196,6 @@ $button-dim: scale.$medium + scale.$teeny * 1.44;
     z-index: -2;
     box-shadow: 0 8px 16px 0 colors.dusk(0.125);
     transition: 0.25s box-shadow;
-    // border-bottom: 2px solid colors.$dusk;
   }
   &:hover:after, &focus:after {
     box-shadow: 0 2px 4px 0 colors.dusk(0.25);

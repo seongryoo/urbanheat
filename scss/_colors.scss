@@ -19,3 +19,8 @@ $salmon: rgb(255, 102, 97);
 @mixin heatwave-bg {
   background: linear-gradient(45deg, $salmon 20%, $grapefruit 50%, $lemon 100%);
 }
+
+@function heatwave-gradient($alpha, $angle) {
+  @return linear-gradient($angle, salmon($alpha) 20%, grapefruit($alpha) 50%, lemon($alpha) 100%);
+}
+

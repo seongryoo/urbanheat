@@ -48,8 +48,10 @@
   position: relative;
   white-space: inherit;
 }
-@mixin rounded {
+@mixin bordered {
   border: 1px solid colors.dusk(0.25);
+}
+@mixin rounded {
   border-radius: scale.px(scale.$teeny);
   overflow: hidden;
 }

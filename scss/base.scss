@@ -67,6 +67,7 @@ iframe {
   }
 }
 figure {
+  @include mixins.bordered;
   @include mixins.rounded;
 }
 figure.is-type-video {
