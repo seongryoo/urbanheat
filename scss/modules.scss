@@ -32,7 +32,9 @@
   padding: scale.$medium 0;
 }
 .hero {
+  @include mixins.the-content-v-margin-large;
   &:nth-child(1) {
+    margin-top: 0;
     .hero__container__content {
       padding: scale.px(scale.$large) 0;
       padding: scale.$large 0;
