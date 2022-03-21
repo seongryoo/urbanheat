@@ -30,8 +30,8 @@
 }
 .hero {
   // Mid-page hero banners
+  background: colors.heatwave-gradient(0.175, 215deg);
   @include mixins.the-content-v-margin-large;
-  background: colors.heatwave-gradient(0.2, 215deg);
 
   // Page vanguard hero banners
   &:nth-child(1) {
@@ -381,5 +381,37 @@ a.site-title {
     border: none;
     background: none;
     opacity: 0.75;
+  }
+}
+
+.carousel {
+  @include mixins.contained-edge-padding;
+  @include mixins.contained-centered;
+  @include mixins.contained-max-width;
+  // @include mixins.reader-column-max-width;
+  @include mixins.the-content-v-margin-large;
+  display: flex;
+  flex-wrap: wrap;
+}
+.carousel__card {
+  flex: 1 1 33%;
+  box-sizing: border-box;
+}
+@media (min-width: scale.$break-m) {
+  .carousel__card:nth-child(3n+1) {
+    padding-left: 0;
+    padding-right: scale.px(scale.$medium * 0.667);
+    padding-right: scale.$medium * 0.667;
+  }
+  .carousel__card:nth-child(3n+2) {
+    padding-left: scale.px(scale.$medium * 0.333);
+    padding-left: scale.$medium * 0.333;
+    padding-right: scale.px(scale.$medium * 0.333);
+    padding-right: scale.$medium * 0.333;
+  }
+  .carousel__card:nth-child(3n+3) {
+    padding-right: 0;
+    padding-left: scale.px(scale.$medium * 0.667);
+    padding-left: scale.$medium * 0.667;
   }
 }

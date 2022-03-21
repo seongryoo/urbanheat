@@ -35,7 +35,7 @@
         data-uha-interface="burger"
       >
         <span id="label_burger" class="aria-labelledby" aria-hidden="true">
-          <?php _e( 'Open main menu', 'urbanheat' ); ?>
+          <?php _e( 'Main menu', 'urbanheat' ); ?>
         </span>
         <svg 
           class="hamburger__icon"

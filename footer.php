@@ -36,7 +36,7 @@
           </div>
           <nav aria-labelledby="label_footernav" class="flex-row__bead flex-row--stretched__bead">
             <span id="label_footernav" class="aria-labelledby" aria-hidden="true">
-              <?php _e( 'Footer navigation', 'urbanheat' ); ?>
+              <?php _e( 'Footer links', 'urbanheat' ); ?>
             </span>
             <?php
               wp_nav_menu( array(
