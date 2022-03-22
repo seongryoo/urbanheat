@@ -4,14 +4,11 @@
   <?php if ( have_posts() ) {
     while ( have_posts() ) {
       the_post(); ?>
-      
-
-        <div class="contained">
-          <h1 class="heading--post-title">
-            <?php the_title(); ?>
-          </h1>
+        <h1 class="heading--post-title">
+          <?php the_title(); ?>
+        </h1>
+        <div class="the-content">
           <?php the_content(); ?>
-          <p>Welcomet o the news</p>
         </div>
       <?php
     }

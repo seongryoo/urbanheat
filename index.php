@@ -4,11 +4,9 @@
   <?php if ( have_posts() ) {
     while ( have_posts() ) {
       the_post(); ?>
-      
-        <h1 class="heading--page-title contained">
+        <h1 class="heading--page-title">
           <?php the_title(); ?>
         </h1>
-
         <div class="the-content">
           <?php the_content(); ?>
         </div>

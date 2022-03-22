@@ -6,7 +6,12 @@
 
 // IDEEA: make in-page hero blocks have different font qualities AND a gradient temperature bakcground
 
-.heading--post-title {
+.heading--post-title,
+.heading--page-title {
+  @include mixins.contained-edge-padding;
+  @include mixins.contained-centered;
+  @include mixins.reader-column-max-width;
+  @include mixins.the-content-v-margin;
   margin-top: scale.px(scale.$large);
   margin-top: scale.$large;
 }
