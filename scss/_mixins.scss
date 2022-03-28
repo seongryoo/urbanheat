@@ -49,10 +49,14 @@
   white-space: inherit;
 }
 @mixin bordered {
-  border: 1px solid colors.dusk(0.25);
+  border: 1px solid colors.dusk(0.4);
 }
 @mixin rounded {
   border-radius: scale.px(scale.$teeny);
+  overflow: hidden;
+}
+@mixin rounded--wide-arc {
+  border-radius: scale.px(scale.$small);
   overflow: hidden;
 }
 @mixin shadowed {

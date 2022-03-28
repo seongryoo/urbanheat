@@ -32,12 +32,6 @@ h2 {
 a {
   @include text-styles.link;
 }
-a:hover, a:focus {
-  background: colors.grapefruit(0.75);
-  border-bottom: scale.px(scale.$teeny) solid colors.$dusk;
-  border-bottom: scale.$teeny solid colors.$dusk;
-  color: black;
-}
 iframe {
   width: 100%;
 }

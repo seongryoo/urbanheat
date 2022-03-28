@@ -49,6 +49,7 @@ $font-size-dh: rem($p5);
 $font-size-mb: rem($p1);
 $font-size-mh: rem($p4);
 $font-size-db-b: rem($p2);
+$font-size-small: rem($p0);
 
 // Line heights
 $line-height-db: 1.728;
@@ -60,7 +61,7 @@ $line-height-mh: 1.2;
   @return $line-height-db * $font-size-db * $num-lines;
 }
 
-$break-xs: rem(360px);
+$break-xs: rem(420px);
 $break-s: rem(720px); // hamburger icon appears
 $break-m: rem(900px); // hero banners pre-emptively stack vertically
 $break-l: rem(1440px);

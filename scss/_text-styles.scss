@@ -19,24 +19,43 @@
     line-height: scale.$line-height-mb;
   }
 }
-@mixin link {
+@mixin link-asleep {
   @include paragraph;
   text-decoration: none;
   border-bottom: scale.px(scale.$thin) solid colors.$grapefruit;
   border-bottom: scale.$thin solid colors.$grapefruit;
   transition: 0.25s background, 0.05s border-bottom, 0.2s outline-offset;
 }
-@mixin link-underline {
+@mixin link-awake {
+  background: colors.grapefruit(0.75);
+  border-bottom: scale.px(scale.$teeny) solid colors.$dusk;
+  border-bottom: scale.$teeny solid colors.$dusk;
+  color: black;
+}
+@mixin link {
+  @include link-asleep;
+  &:hover, &:focus {
+    @include link-awake;
+  }
+}
+@mixin link-underline-asleep {
   @include paragraph;
   text-decoration-thickness: 0;
   transition: 0.25s background, 0.05s text-decoration-thickness, 0.2s outline-offset;
+}
+@mixin link-underline-awake {
+  text-decoration: underline;
+  background: colors.grapefruit(0.75);
+  border: none;
+  text-decoration-thickness: scale.px(scale.$teeny);
+  text-decoration-thickness: scale.$teeny;
+  text-underline-offset: scale.px(scale.$thin);
+  text-underline-offset: scale.$thin;
+}
+@mixin link-underline {
+  @include link-underline-asleep;
   &:hover, &:focus {
-    text-decoration: underline;
-    border: none;
-    text-decoration-thickness: scale.px(scale.$teeny);
-    text-decoration-thickness: scale.$teeny;
-    text-underline-offset: scale.px(scale.$thin);
-    text-underline-offset: scale.$thin;
+    @include link-underline-awake;
   }
 }
 @mixin link-inverted {
@@ -62,9 +81,9 @@
 }
 @mixin paragraph-alt {
   @include base-text;
-  font-family: 'Montserrat', Verdana, sans-serif;
-  font-size: scale.px(scale.$font-size-db-b);
-  font-size: scale.$font-size-db-b;
+  font-family: 'OpenSans', Verdana, sans-serif;
+  font-size: scale.px(scale.$font-size-small);
+  font-size: scale.$font-size-small;
   line-height: scale.$line-height-db;
 }
 @mixin page-heading {
