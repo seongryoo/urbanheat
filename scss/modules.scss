@@ -411,41 +411,43 @@ a.site-title {
   height: 0;
 }
 @media (min-width: scale.$break-xs) {
-  .carousel--2-col__card,
-  .carousel--2-col__card--dummy {
+  .carousel__card,
+  .carousel__card--dummy {
     flex: 1 1 50%;
   }
-  .carousel--3-col__card {
-    flex: 1 1 33%;
-  }
-  .carousel--2-col__card:nth-child(2n+1) {
+  .carousel__card:nth-child(2n+1) {
     padding-left: 0;
     padding-right: scale.px(scale.$medium * 0.5);
     padding-right: scale.$medium * 0.5;
   }
-  .carousel--2-col__card:nth-child(2n+2) {
+  .carousel__card:nth-child(2n+2) {
     padding-right: 0;
     padding-left: scale.px(scale.$medium * 0.5);
     padding-left: scale.$medium * 0.5;
   }
+}
+@media (min-width: scale.$break-s) {
+  .carousel--3-col__card, .carousel--3-col__card--dummy {
+    flex: 1 1 33%;
+  }
+  $spacing: scale.$medium;
   .carousel--3-col__card:nth-child(3n+1) {
     padding-left: 0;
-    padding-right: scale.px(scale.$medium * 0.667);
-    padding-right: scale.$medium * 0.667;
+    padding-right: scale.px($spacing * 0.667);
+    padding-right: $spacing * 0.667;
   }
   .carousel--3-col__card:nth-child(3n+2) {
-    padding-left: scale.px(scale.$medium * 0.333);
-    padding-left: scale.$medium * 0.333;
-    padding-right: scale.px(scale.$medium * 0.333);
-    padding-right: scale.$medium * 0.333;
+    padding-left: scale.px($spacing * 0.333);
+    padding-left: $spacing * 0.333;
+    padding-right: scale.px($spacing * 0.333);
+    padding-right: $spacing * 0.333;
   }
   .carousel--3-col__card:nth-child(3n+3) {
     padding-right: 0;
-    padding-left: scale.px(scale.$medium * 0.667);
-    padding-left: scale.$medium * 0.667;
+    padding-left: scale.px($spacing * 0.667);
+    padding-left: $spacing * 0.667;
   }
 }
-
 .card__link__text {
   display: inline;
   font-weight: 500;

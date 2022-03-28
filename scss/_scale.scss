@@ -61,7 +61,7 @@ $line-height-mh: 1.2;
   @return $line-height-db * $font-size-db * $num-lines;
 }
 
-$break-xs: rem(420px);
+$break-xs: rem(480px);
 $break-s: rem(720px); // hamburger icon appears
 $break-m: rem(900px); // hero banners pre-emptively stack vertically
 $break-l: rem(1440px);
