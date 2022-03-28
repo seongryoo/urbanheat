@@ -33,9 +33,11 @@
   padding: scale.px(scale.$medium) 0;
   padding: scale.$medium 0;
 }
+.hero--gradient-bg {
+  background: colors.heatwave-gradient(0.175, 215deg);
+}
 .hero {
   // Mid-page hero banners
-  background: colors.heatwave-gradient(0.175, 215deg);
   @include mixins.the-content-v-margin-large;
 
   // Page vanguard hero banners
