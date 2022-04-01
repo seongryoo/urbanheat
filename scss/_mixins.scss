@@ -50,6 +50,7 @@
 }
 @mixin bordered {
   border: 1px solid colors.dusk(0.4);
+  box-sizing: border-box;
 }
 @mixin rounded {
   border-radius: scale.px(scale.$teeny);
