@@ -444,3 +444,36 @@ a.site-title {
 .profile__text__desc {
   @include text-styles.paragraph-alt;
 }
+
+.logo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  img {
+    height: scale.px(scale.$huge);
+    height: scale.$huge;
+    width: auto;
+    max-width: scale.px(scale.$huge);
+    max-width: scale.$huge;
+    object-fit: contain;
+    border: none;
+  }
+  figure {
+    margin: scale.px(scale.$small);
+    margin: scale.$small;
+    overflow: visible;
+  }
+  a {
+    border: none;
+    display: block;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: 0.5s opacity, 0.5s filter, 0.25s outline-offset;
+    &:hover, &:focus {
+      border: none;
+      filter: grayscale(0);
+      opacity: 1;
+      background: none;
+    }
+  }
+}
