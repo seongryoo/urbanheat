@@ -390,69 +390,9 @@ a.site-title {
     opacity: 0.75;
   }
 }
-.carousel {
-  @include mixins.contained-edge-padding;
-  @include mixins.contained-centered;
-  @include mixins.the-content-v-margin-large;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-.carousel--2-col {
-  @include mixins.reader-column-max-width;
-}
-.carousel--3-col {
-  @include mixins.contained-max-width;
-}
-.carousel__card {
-  box-sizing: border-box;
-  padding: 0;
-  width: 100%;
-}
-.carousel__card--dummy {
-  height: 0;
-}
-@media (min-width: scale.$break-xs) {
-  .carousel__card,
-  .carousel__card--dummy {
-    flex: 1 1 50%;
-  }
-  .carousel__card:nth-child(2n+1) {
-    padding-left: 0;
-    padding-right: scale.px(scale.$medium * 0.5);
-    padding-right: scale.$medium * 0.5;
-  }
-  .carousel__card:nth-child(2n+2) {
-    padding-right: 0;
-    padding-left: scale.px(scale.$medium * 0.5);
-    padding-left: scale.$medium * 0.5;
-  }
-}
-@media (min-width: scale.$break-s) {
-  .carousel--3-col__card, .carousel--3-col__card--dummy {
-    flex: 1 1 33%;
-  }
-  $spacing: scale.$medium;
-  .carousel--3-col__card:nth-child(3n+1) {
-    padding-left: 0;
-    padding-right: scale.px($spacing * 0.667);
-    padding-right: $spacing * 0.667;
-  }
-  .carousel--3-col__card:nth-child(3n+2) {
-    padding-left: scale.px($spacing * 0.333);
-    padding-left: $spacing * 0.333;
-    padding-right: scale.px($spacing * 0.333);
-    padding-right: $spacing * 0.333;
-  }
-  .carousel--3-col__card:nth-child(3n+3) {
-    padding-right: 0;
-    padding-left: scale.px($spacing * 0.667);
-    padding-left: $spacing * 0.667;
-  }
-}
 .card__link__text {
   display: inline;
-  font-weight: 500;
+  font-weight: bold;
   @include text-styles.link-asleep;
   border-bottom-width: 0;
 }
@@ -480,4 +420,27 @@ a.site-title {
 .card {
   margin-bottom: scale.px(scale.$medium);
   margin-bottom: scale.$medium;
+}
+
+.profiles-showcase {
+  padding-top: scale.px(scale.$small);
+  padding-bottom: scale.px(scale.$small);
+  padding-top: scale.$small;
+  padding-bottom: scale.$small;
+}
+.profile {
+  margin-bottom: scale.px(scale.$medium);
+  margin-bottom: scale.$medium;
+}
+.profile__image {
+
+}
+.profile__text {
+
+}
+.profile__text__name {
+  font-weight: bold;
+}
+.profile__text__desc {
+  @include text-styles.paragraph-alt;
 }

@@ -25,12 +25,14 @@ $p12: 161.56px;
 $p13: 193.872px;
 $p14: 232.646px;
 $p15: 279.175px;
+
 $p-1: 12.583px;
 $p-2: 10.486px;
 $p-5: 6.068px;
 $p-9: 2.927px;
 
 // Padding sizes
+$huge: rem($p12);
 $large: rem($p9);
 $medium: rem($p4);
 $small: rem($p1);

@@ -7,6 +7,12 @@
   @include mixins.contained-edge-padding;
   @include mixins.contained-centered;
 }
+.legible {
+  @include mixins.contained-max-width;
+  @include mixins.contained-edge-padding;
+  @include mixins.contained-centered;
+  @include mixins.reader-column-max-width;
+}
 
 // Link chain
 .link-chain {
@@ -72,13 +78,41 @@
   margin-left: scale.px(scale.$medium) * 0.5;
   margin-left: scale.$medium * 0.5;
 }
+.windsock--narrow {
+  .windsock__left {
+    margin-right: scale.px(scale.$small) * 0.5;
+    margin-right: scale.$small * 0.5;
+  }
+  .windsock__right {
+    margin-left: scale.px(scale.$small) * 0.5;
+    margin-left: scale.$small * 0.5;
+  }
+}
+.windsock--centered {
+  align-items: center;
+}
 .windsock__image {
   width: scale.px(scale.$large);
   width: scale.$large;
   height: 100%;
 }
-.windsock__image__img {
-  width: 100%;
+.windsock__image--huge {
+  width: scale.px(scale.$huge);
+  width: scale.$huge;
+}
+.windsock__image--rounded {
+  border-radius: scale.px(scale.$huge);
+  border-radius: scale.$huge;
+}
+.windsock__image--square {
+  height: scale.px(scale.$large);
+  height: scale.$large;
+  object-fit: cover;
+}
+.windsock__image--square.windsock__image--huge {
+  height: scale.px(scale.$huge);
+  height: scale.$huge;
+  object-fit: cover;
 }
 .windsock__content {
 
@@ -109,4 +143,57 @@
 .flex-row--stretched__bead {
   margin-right: scale.px(scale.$large);
   margin-right: scale.$large;
+}
+
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.carousel__card {
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+}
+.carousel__card--dummy {
+  height: 0;
+}
+@media (min-width: scale.$break-xs) {
+  .carousel__card,
+  .carousel__card--dummy {
+    flex: 1 1 50%;
+  }
+  .carousel__card:nth-child(2n+1) {
+    padding-left: 0;
+    padding-right: scale.px(scale.$medium * 0.5);
+    padding-right: scale.$medium * 0.5;
+  }
+  .carousel__card:nth-child(2n+2) {
+    padding-right: 0;
+    padding-left: scale.px(scale.$medium * 0.5);
+    padding-left: scale.$medium * 0.5;
+  }
+}
+@media (min-width: scale.$break-s) {
+  .carousel--3-col__card, .carousel--3-col__card--dummy {
+    flex: 1 1 33%;
+  }
+  $spacing: scale.$medium;
+  .carousel--3-col__card:nth-child(3n+1) {
+    padding-left: 0;
+    padding-right: scale.px($spacing * 0.667);
+    padding-right: $spacing * 0.667;
+  }
+  .carousel--3-col__card:nth-child(3n+2) {
+    padding-left: scale.px($spacing * 0.333);
+    padding-left: $spacing * 0.333;
+    padding-right: scale.px($spacing * 0.333);
+    padding-right: $spacing * 0.333;
+  }
+  .carousel--3-col__card:nth-child(3n+3) {
+    padding-right: 0;
+    padding-left: scale.px($spacing * 0.667);
+    padding-left: $spacing * 0.667;
+  }
 }

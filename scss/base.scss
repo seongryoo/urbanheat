@@ -68,6 +68,10 @@ figure > * {
   @include mixins.bordered;
   @include mixins.rounded;
 }
-figure.is-type-video > * {
+figure.is-type-video {
   @include mixins.shadowed;
+}
+img {
+  width: 100%;
+  height: auto;
 }
