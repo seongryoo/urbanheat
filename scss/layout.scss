@@ -160,16 +160,16 @@
   height: 0;
 }
 @media (min-width: scale.$break-xs) {
-  .carousel__card,
-  .carousel__card--dummy {
+  .carousel--2-col__card,
+  .carousel--2-col__card--dummy {
     flex: 1 1 50%;
   }
-  .carousel__card:nth-child(2n+1) {
+  .carousel--2-col__card:nth-child(2n+1) {
     padding-left: 0;
     padding-right: scale.px(scale.$medium * 0.5);
     padding-right: scale.$medium * 0.5;
   }
-  .carousel__card:nth-child(2n+2) {
+  .carousel--2-col__card:nth-child(2n+2) {
     padding-right: 0;
     padding-left: scale.px(scale.$medium * 0.5);
     padding-left: scale.$medium * 0.5;
