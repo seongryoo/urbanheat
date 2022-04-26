@@ -45,9 +45,7 @@ iframe {
 .the-content {
   > p, 
   > ul, 
-  > blockquote, 
-  > h1, 
-  > h2 {
+  > blockquote {
     @include mixins.contained-edge-padding;
     @include mixins.contained-centered;
     @include mixins.reader-column-max-width;
@@ -60,11 +58,19 @@ iframe {
     @include mixins.reader-column-max-width;
     @include mixins.the-content-v-margin-large;
   }
+  > h1,
+  > h2 {
+    @include mixins.contained-edge-padding;
+    @include mixins.contained-centered;
+    @include mixins.reader-column-max-width;
+    @include mixins.the-content-v-margin-heading;
+  }
 }
 figure {
   @include mixins.rounded;
 }
-figure > * {
+figure > img,
+figure > .wp-block-embed__wrapper {
   @include mixins.bordered;
   @include mixins.rounded;
 }
@@ -74,4 +80,7 @@ figure.is-type-video {
 img {
   width: 100%;
   height: auto;
+}
+figcaption {
+  @include text-styles.paragraph-alt;
 }

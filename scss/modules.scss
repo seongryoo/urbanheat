@@ -37,22 +37,20 @@
   background: colors.heatwave-gradient(0.175, 215deg);
 }
 .hero {
-  // Mid-page hero banners
   @include mixins.the-content-v-margin-large;
-
-  // Page vanguard hero banners
-  &:nth-child(1) {
-    background: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    .hero__container__content {
-      padding: scale.px(scale.$large) 0;
-      padding: scale.$large 0;
-    }
-    .hero__container__content--right {
-      @media (max-width: scale.$break-m) {
-        padding-top: 0;
-      }
+}
+.hero--large {
+  margin-top: 0;
+  margin-bottom: 0;
+  .hero__container__content {
+    padding-top: scale.px(scale.$large);
+    padding-top: scale.$large;
+    padding-bottom: scale.px(scale.$large);
+    padding-bottom: scale.$large;
+  }
+  .hero__container__content--right {
+    @media (max-width: scale.$break-m) {
+      padding-top: 0;
     }
   }
 }
@@ -353,11 +351,19 @@ a.site-title {
   width: 100%;
 }
 .menu--footer__link-item,
-.menu--socials__link-item {
+.menu--socials__link-item,
+.menu--action-items__link-item {
   line-height: scale.$line-height-db;
   margin-bottom: scale.px(scale.$teeny);
   margin-bottom: scale.$teeny;
 }
+
+.action-items {
+  margin-top: scale.px(scale.$large);
+  margin-top: scale.$large;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
 @mixin auto-icon($char) {
   font-family: "FontAwesome";
   margin-right: scale.px(scale.$teeny);
@@ -433,7 +439,7 @@ a.site-title {
   margin-bottom: scale.$medium;
 }
 .profile__image {
-
+  border: 1px solid lightgray;
 }
 .profile__image--empty {
   background: colors.$grapefruit;
@@ -480,3 +486,4 @@ a.site-title {
     }
   }
 }
+

@@ -64,10 +64,10 @@
         </span>
         <?php
           wp_nav_menu( array(
-            'menu'          => 'primary',
-            'depth'         => 1,
-            'container'     => false,
-            'menu_class'    => 'menu menu--primary link-chain link-chain--flush-right',
+            'theme_location'          => 'primary',
+            'depth'                   => 1,
+            'container'               => false,
+            'menu_class'              => 'menu menu--primary link-chain link-chain--flush-right',
           ) );
         ?>
       </nav>

@@ -156,6 +156,9 @@
   padding: 0;
   width: 100%;
 }
+.carousel--1-col__card:nth-last-child(1) {
+  margin-bottom: 0;
+}
 .carousel__card--dummy {
   height: 0;
 }

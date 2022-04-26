@@ -54,13 +54,14 @@ class UrbanHeatATL_Theme {
         'primary'   => 'Primary menu',
         'footer'    => 'Footer menu',
         'socials'   => 'Social links',
+        'action-items' => 'Footer action items',
       );
       register_nav_menus( $menu_locations );
     } );
   }
   function filters__theme() {
     add_filter( 'wp_nav_menu_objects', function( $items, $args ) {
-      if ( $args->menu == 'primary' ) {
+      if ( $args->theme_location == 'primary' ) {
         foreach ( $items as $item ) {
           array_push( 
             $item->classes, 
@@ -71,7 +72,7 @@ class UrbanHeatATL_Theme {
           );
         }
       }
-      if ( $args->menu == 'footer' ) {
+      if ( $args->theme_location == 'footer' ) {
         foreach ( $items as $item ) {
           array_push( 
             $item->classes, 
@@ -79,7 +80,17 @@ class UrbanHeatATL_Theme {
           );
         }
       }
-      if ( $args->menu == 'socials' ) {
+      if ( $args->theme_location == 'action-items' ) {
+        foreach ( $items as $item ) {
+          array_push( 
+            $item->classes, 
+            'menu--action-items__link-item',
+            'link-chain__link-item', 
+            'link-chain--flush-left__link-item' 
+          );
+        }
+      }
+      if ( $args->theme_location == 'socials' ) {
         foreach ( $items as $item ) {
           array_push( 
             $item->classes, 
