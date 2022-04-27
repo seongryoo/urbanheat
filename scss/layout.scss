@@ -27,16 +27,25 @@
   margin-right: scale.px(scale.$small);
   margin-right: scale.$small;
   margin-left: 0;
-  float: left;
-}
-.link-chain--flush-right {
-  float: right;
-  justify-content: flex-end;
 }
 .link-chain--flush-right__link-item {
   margin-right: 0;
   margin-left: scale.px(scale.$small);
   margin-left: scale.$small;
+}
+.link-chain--flush-left--stretched__link-item {
+  margin-right: scale.px(scale.$medium);
+  margin-right: scale.$medium;
+  margin-left: 0;
+}
+.link-chain--flush-right--stretched__link-item {
+  margin-right: 0;
+  margin-left: scale.px(scale.$medium);
+  margin-left: scale.$medium;
+}
+.link-chain--flush-right {
+  float: right;
+  justify-content: flex-end;
 }
 
 // Wall Hugger

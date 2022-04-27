@@ -31,8 +31,8 @@
   margin-top: scale.$medium;
 }
 @mixin the-content-v-margin-heading {
-  margin-bottom: scale.px(scale.$small);
-  margin-bottom: scale.$small;
+  margin-bottom: scale.px(scale.$medium);
+  margin-bottom: scale.$medium;
   margin-top: scale.px(scale.$large);
   margin-top: scale.$large;
   &:nth-child(1) {

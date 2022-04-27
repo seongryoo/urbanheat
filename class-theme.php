@@ -86,7 +86,7 @@ class UrbanHeatATL_Theme {
             $item->classes, 
             'menu--action-items__link-item',
             'link-chain__link-item', 
-            'link-chain--flush-left__link-item' 
+            'link-chain--flush-left--stretched__link-item' 
           );
         }
       }

@@ -62,7 +62,7 @@
             'theme_location'          => 'action-items',
             'depth'                   => 1,
             'container'               => false,
-            'menu_class'              => 'menu menu--action-items link-chain link-chain--flush-left',
+            'menu_class'              => 'menu menu--action-items link-chain link-chain--flush-left link-chain--flush-left--stretched',
           ) );
         ?>
       </nav>
